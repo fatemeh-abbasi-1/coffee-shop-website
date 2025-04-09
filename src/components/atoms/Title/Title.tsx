@@ -6,8 +6,9 @@ const Title: React.FC<TitleProps> = ({
   size = "large",
   className = "",
 }) => {
-  const baseStyles = "font-bold";
-  const sizeStyles = size === "large" ? "text-4xl md:text-5xl" : "text-3xl md:text-4xl";
+  const baseStyles = " text-white font-bold ";
+  const sizeStyles =
+    size === "large" ? "text-4xl md:text-5xl" : "text-3xl md:text-4xl";
 
   const combinedClass = `${baseStyles} ${sizeStyles} ${className}`;
 

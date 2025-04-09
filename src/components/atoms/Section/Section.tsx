@@ -10,7 +10,7 @@ const Section: React.FC<SectionProps> = ({
     <section
       className={`${
         backgroundColor ? backgroundColor : "bg-background-secondary"
-      } ${height ? `${height}` : "h-dvh"} pr-10 pl-10`}
+      } ${height ? `${height}` : "h-dvh"} pr-32 pl-32`}
     >
       {children}
     </section>

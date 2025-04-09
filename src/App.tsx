@@ -1,10 +1,10 @@
 import Section from "./components/atoms/Section/Section";
-import Title from "./components/atoms/Title/Title";
+import Header from "./components/molecules/Header/Header";
 
 function App() {
   return (
     <Section>
-      <Title>fatemeh abbasii</Title>
+      <Header />
     </Section>
   );
 }

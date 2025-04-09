@@ -6,10 +6,10 @@ const Text: React.FC<TextProps> = ({
   variant = "medium",
   className = "",
 }) => {
-  const baseStyles = "text-gray-800";
+  const baseStyles = "text-white text-gray-800";
   const sizeStyles =
     variant === " large "
-      ? "text-lg md:text-xl"
+      ? " text-lg md:text-xl"
       : variant === "small"
       ? "text-sm md:text-base"
       : "text-base md:text-lg";
