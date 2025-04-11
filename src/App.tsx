@@ -1,11 +1,18 @@
 import Section from "./components/atoms/Section/Section";
-import Header from "./components/molecules/Header/Header";
+import Hero from "./components/molecules/Hero/Hero";
+import Header from "./components/organisms/Header/Header";
 
 function App() {
   return (
-    <Section>
-      <Header />
-    </Section>
+    <>
+      <Section>
+        <Header />
+        <Hero />
+      </Section>
+      <Section backgroundColor={"bg-main-background-secondary"}>
+        <p>heloo</p>
+      </Section>
+    </>
   );
 }
 

@@ -1,11 +1,11 @@
 import { ButtonProps } from "./types";
 
 const Button: React.FC<ButtonProps> = ({ variant = "primary", children }) => {
-  const baseStyles = "w-40 h-14 border-4 rounded-full center";
+  const baseStyles = "w-40 h-14 rounded-full font-bold";
   const sizeStyles =
     variant === "primary"
-      ? "bg-tranparent  border-mocha text-white"
-      : "bg-white text-black";
+      ? " bg-tranparent text-white outline outline-4 outline-mocha"
+      : "bg-white text-mocha text-lg";
 
   return <button className={`${baseStyles} ${sizeStyles}`}>{children}</button>;
 };

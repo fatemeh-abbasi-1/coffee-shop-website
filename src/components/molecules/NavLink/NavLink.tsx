@@ -6,7 +6,7 @@ const NavLink: React.FC<NavLinkProps> = ({ variant }) => {
 
   return (
     <nav>
-      <ul className={`flex flex-row gap-14 ${sizeStyle}`}>
+      <ul className={`flex flex-row gap-14 font-bold ${sizeStyle}`}>
         <Text>
           <li>
             <a href="#">ABOUT US</a>
