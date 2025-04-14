@@ -1,5 +1,6 @@
 import Section from "./components/atoms/Section/Section";
 import Hero from "./components/molecules/Hero/Hero";
+import ProductsMenuSection from "./components/organisms/ProductsMenuSection/ProductsMenuSection";
 import Header from "./components/organisms/Header/Header";
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
         <Hero />
       </Section>
       <Section backgroundColor={"bg-main-background-secondary"}>
-        <p>heloo</p>
+        
+       <ProductsMenuSection />
       </Section>
     </>
   );

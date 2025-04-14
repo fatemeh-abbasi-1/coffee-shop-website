@@ -1,4 +1,4 @@
 export type ButtonProps = {
-  variant?: "primary" | "secondary";
+  variant?: "large-primary" | "large-secondary" | "small";
   children: React.ReactNode;
 };

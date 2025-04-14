@@ -9,7 +9,7 @@ const Header: React.FC = () => {
         <Logo />
         <div className="flex flex-row gap-20 pt-8">
           <NavLink variant="header" />
-          <Button variant="secondary">Sign Up</Button>
+          <Button variant="large-secondary">Sign Up</Button>
         </div>
       </header>
       <hr className="border border-mocha" />

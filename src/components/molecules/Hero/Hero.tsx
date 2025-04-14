@@ -15,7 +15,7 @@ const Hero = () => {
           adipisci facere. Quidem, voluptate fugit! Animi sint aperiam,
           voluptatem delectus libero sit facere!
         </Text>
-        <Button>SHOP NOW</Button>
+        <Button variant="large-primary">SHOP NOW</Button>
       </div>
       <img src={img} alt="" className="bg-transparent w-[500px]" />
     </div>
