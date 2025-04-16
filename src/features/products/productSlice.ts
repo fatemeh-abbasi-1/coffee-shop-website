@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice,PayloadAction } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export interface Product {
@@ -25,10 +25,10 @@ const initialState: ProductsState = {
 export const fetchProducts = createAsyncThunk(
   "product/fetchProducts",
   async () => {
-    const respanse = await axios.get("http://localhost:3000/products");
-    console.log(respanse);
-    
-    return respanse.data;
+    const response = await axios.get("http://localhost:3000/products");
+    console.log(response);
+
+    return response.data;
   }
 );
 
@@ -40,25 +40,22 @@ export const productsSlice = createSlice({
     builder
       // وقتی در حال fetch هست
       .addCase(fetchProducts.pending, (state) => {
-        state.status = 'loading';
+        state.status = "loading";
       })
       // وقتی fetch موفق بود
-      .addCase(fetchProducts.fulfilled, (state, action: PayloadAction<Product[]>) => {
-        state.status = 'succeeded';
-        state.products = action.payload;
-      })
+      .addCase(
+        fetchProducts.fulfilled,
+        (state, action: PayloadAction<Product[]>) => {
+          state.status = "succeeded";
+          state.products = action.payload;
+        }
+      )
       // وقتی fetch خطا داد
       .addCase(fetchProducts.rejected, (state, action) => {
-        state.status = 'failed';
-        state.error = action.error.message || 'خطا در دریافت اطلاعات';
+        state.status = "failed";
+        state.error = action.error.message || "خطا در دریافت اطلاعات";
       });
   },
 });
 
 export default productsSlice.reducer;
-
-
-
-
-
-
