@@ -10,22 +10,26 @@ export interface Product {
   discount: number;
 }
 
-interface ProductsState {
+export interface ProductsState {
   products: Product[];
   status: "idle" | "loading" | "succeeded" | "failed";
   error: string | null;
+  page: number;
 }
 
 const initialState: ProductsState = {
   products: [],
   status: "idle",
   error: null,
+  page: 1,
 };
 
 export const fetchProducts = createAsyncThunk(
   "product/fetchProducts",
-  async () => {
-    const response = await axios.get("http://localhost:3000/products");
+  async (page) => {
+    const response = await axios.get(
+      `http://localhost:3000/products?_page=${page}&_limit=9`
+    );
     console.log(response);
 
     return response.data;
@@ -35,14 +39,19 @@ export const fetchProducts = createAsyncThunk(
 export const productsSlice = createSlice({
   name: "products",
   initialState,
-  reducers: {},
+  reducers: {
+    incrementPage: (state) => {
+      state.page += 1;
+    },
+    decrementPage: (state) => {
+      state.page -= 1;
+    },
+  },
   extraReducers: (builder) => {
     builder
-      // وقتی در حال fetch هست
       .addCase(fetchProducts.pending, (state) => {
         state.status = "loading";
       })
-      // وقتی fetch موفق بود
       .addCase(
         fetchProducts.fulfilled,
         (state, action: PayloadAction<Product[]>) => {
@@ -50,12 +59,12 @@ export const productsSlice = createSlice({
           state.products = action.payload;
         }
       )
-      // وقتی fetch خطا داد
       .addCase(fetchProducts.rejected, (state, action) => {
         state.status = "failed";
-        state.error = action.error.message || "خطا در دریافت اطلاعات";
+        state.error = action.error.message || "Error... ";
       });
   },
 });
 
+export const { incrementPage, decrementPage } = productsSlice.actions;
 export default productsSlice.reducer;
