@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { RootState } from "../../app/store";
 import axios from "axios";
 
 export interface Product {
@@ -24,17 +25,39 @@ const initialState: ProductsState = {
   page: 1,
 };
 
-export const fetchProducts = createAsyncThunk(
-  "product/fetchProducts",
-  async (page) => {
-    const response = await axios.get(
-      `http://localhost:3000/products?_page=${page}&_limit=9`
-    );
-    console.log(response);
+// export const fetchProducts = createAsyncThunk<Product[], number>(
+//   "product/fetchProducts",
+//   async (page) => {
+//     console.log("📦 FETCH PRODUCTS - page:", page);
+//     const response = await axios.get(
+//       `http://localhost:3000/products?_page=${page}&_limit=9`
+//     );
+//     console.log(response);
 
-    return response.data;
-  }
-);
+//     return response.data;
+//   }
+// );
+
+export const fetchProducts = createAsyncThunk<
+  Product[],
+  void,
+  { state: RootState }
+>("product/fetchProducts", async (_, thunkAPI) => {
+  const state = thunkAPI.getState();
+  const page = state.products.page;
+  console.log("📦 FETCH PRODUCTS for page:", page);
+
+  const response = await axios.get(
+    `http://localhost:3000/products?_page=${page}&_limit=9`,
+    {
+      headers: {
+        Accept: "application/json",
+      },
+    }
+  );
+
+  return response.data;
+});
 
 export const productsSlice = createSlice({
   name: "products",
@@ -56,6 +79,8 @@ export const productsSlice = createSlice({
         fetchProducts.fulfilled,
         (state, action: PayloadAction<Product[]>) => {
           state.status = "succeeded";
+          console.log(action.payload);
+
           state.products = action.payload;
         }
       )

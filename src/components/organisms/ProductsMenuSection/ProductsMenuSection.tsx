@@ -17,18 +17,32 @@ const ProductsMenuSection: React.FC = () => {
     "w-14 text-mocha bg-white p-2 rounded-full cursor-pointer";
   const dispatch = useDispatch<AppDispatch>();
   const products = useSelector((state: RootState) => state.products.products);
-  const status = useSelector((state: RootState) => state.products.status);
+  // const status = useSelector((state: RootState) => state.products.status);
   const page = useSelector((state: RootState) => state.products.page);
 
   useEffect(() => {
-    if (status === "idle") {
-      dispatch(fetchProducts());
-    }
-  }, [dispatch, status, page]);
+    dispatch(fetchProducts());
+  }, [page, dispatch]);
 
-  const handleArrowRightClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    dispatch(incrementPage());
+  // useEffect(() => {
+  //   dispatch(fetchProducts(page));
+  // }, [page,dispatch]);
+
+  // useEffect(() => {
+  //   if (status !== "loading") {
+  //     dispatch(fetchProducts(page));
+  //   }
+  // }, [page, status, dispatch]);
+
+  // const handleArrowRightClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+
+  //   dispatch(incrementPage());
+  // };
+
+  const handleArrowRightClick = () => {
+    dispatch(incrementPage()); // این باعث تغییر page میشه → useEffect اجرا میشه
   };
+
   return (
     <div className="flex flex-col gap-16 pt-20 pl-10">
       <div className="flex justify-center">
