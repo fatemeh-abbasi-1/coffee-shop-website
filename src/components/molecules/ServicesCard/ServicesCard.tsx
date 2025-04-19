@@ -1,0 +1,18 @@
+import Title from "../../atoms/Title/Title";
+import Text from "../../atoms/Text/Text";
+// import img from "./../../../assets/images/types-of-cakes.jpg";
+import { ServicesSectionProps } from "./types";
+
+const ServicesCard: React.FC<ServicesSectionProps> = ({ Data }) => {
+  return (
+    <div className="border-4 border-mocha bg-dark_brown w-[380px] h-[480px] flex flex-col items-center rounded-3xl ">
+      <img src={Data.imgSrc} alt="" className="w-full h-60 rounded-t-3xl" />
+      <div className="py-5 px-6 flex flex-col items-center gap-2">
+        <Title size="small">{Data.title}</Title>
+        <Text>{Data.description}</Text>
+      </div>
+    </div>
+  );
+};
+
+export default ServicesCard;

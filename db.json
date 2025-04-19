@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "name": "Hot Chocolate",
+      "name": "fatemeh",
       "price": 150000,
       "image": "coffee-cup.png",
       "inventory": 12,
@@ -12,7 +12,7 @@
       "id": 2,
       "name": "mocha",
       "price": 150000,
-      "image": "coffee-cup.png",
+      "image": "Hot-drink.jpg",
       "inventory": 12,
       "discount": 10
     },

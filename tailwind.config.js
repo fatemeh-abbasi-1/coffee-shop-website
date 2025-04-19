@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         mocha: "#754c36",
+        dark_brown: "#412405",
       },
       backgroundImage: {
         "main-background-primary":

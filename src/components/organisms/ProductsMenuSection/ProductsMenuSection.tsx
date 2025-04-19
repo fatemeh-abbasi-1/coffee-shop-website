@@ -6,62 +6,54 @@ import {
   fetchProducts,
   Product,
   incrementPage,
+  decrementPage,
 } from "../../../features/products/productSlice";
 import { RootState, AppDispatch } from "../../../app/store";
 import LeftArrowSvg from "../../../assets/icons/LeftArrowSvg";
 import RightArrowSvg from "../../../assets/icons/RightArrowSvg";
-// import { increment } from "../../../features/products/productSlice";
+import Section from "../../atoms/Section/Section";
 
 const ProductsMenuSection: React.FC = () => {
-  const baseStyleArrows =
-    "w-14 text-mocha bg-white p-2 rounded-full cursor-pointer";
   const dispatch = useDispatch<AppDispatch>();
   const products = useSelector((state: RootState) => state.products.products);
-  // const status = useSelector((state: RootState) => state.products.status);
   const page = useSelector((state: RootState) => state.products.page);
 
   useEffect(() => {
-    dispatch(fetchProducts());
+    dispatch(fetchProducts(page));
   }, [page, dispatch]);
 
-  // useEffect(() => {
-  //   dispatch(fetchProducts(page));
-  // }, [page,dispatch]);
-
-  // useEffect(() => {
-  //   if (status !== "loading") {
-  //     dispatch(fetchProducts(page));
-  //   }
-  // }, [page, status, dispatch]);
-
-  // const handleArrowRightClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-
-  //   dispatch(incrementPage());
-  // };
-
   const handleArrowRightClick = () => {
-    dispatch(incrementPage()); // این باعث تغییر page میشه → useEffect اجرا میشه
+    dispatch(incrementPage());
   };
 
+  const handleArrowLeftClick = () => {
+    dispatch(decrementPage());
+  };
+
+  const baseStyleArrows =
+    "w-14 text-mocha bg-white p-2 rounded-full cursor-pointer";
+
   return (
-    <div className="flex flex-col gap-16 pt-20 pl-10">
-      <div className="flex justify-center">
-        <Title size="small">Our Products Menu</Title>
+    <Section backgroundColor={"bg-main-background-secondary"}>
+      <div className="flex flex-col gap-16 pt-20 pl-10">
+        <div className="flex justify-center">
+          <Title size="medium">Our Products Menu</Title>
+        </div>
+        <div className="flex flex-wrap gap-16 justify-between">
+          {products.map((product: Product) => (
+            <ProductCard product={product} key={product.id} />
+          ))}
+        </div>
+        <div className="flex flex-row gap-4 self-center">
+          <span className={baseStyleArrows} onClick={handleArrowLeftClick}>
+            <LeftArrowSvg />
+          </span>
+          <span className={baseStyleArrows} onClick={handleArrowRightClick}>
+            <RightArrowSvg />
+          </span>
+        </div>
       </div>
-      <div className="flex flex-wrap gap-16 justify-between">
-        {products.map((product: Product) => (
-          <ProductCard product={product} key={product.id} />
-        ))}
-      </div>
-      <div className="flex flex-row gap-4 self-center">
-        <span className={baseStyleArrows}>
-          <LeftArrowSvg />
-        </span>
-        <span className={baseStyleArrows} onClick={handleArrowRightClick}>
-          <RightArrowSvg />
-        </span>
-      </div>
-    </div>
+    </Section>
   );
 };
 
