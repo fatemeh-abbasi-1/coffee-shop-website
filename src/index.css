@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* body{
-background-color: #754c36;
-} */
+
+@layer base {
+  body {
+    @apply overflow-x-hidden w-full;
+  }
+}

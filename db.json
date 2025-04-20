@@ -2,291 +2,163 @@
   "products": [
     {
       "id": 1,
-      "name": "fatemeh",
-      "price": 150000,
-      "image": "coffee-cup.png",
+      "name": "Iced Latte",
+      "price": "150000 $",
+      "image": "src/assets/images/Smores-Iced-Latte-Recipe-7-1024x1280-removebg-preview.png",
       "inventory": 12,
-      "discount": 10
+      "discount": "10 %"
     },
     {
       "id": 2,
-      "name": "mocha",
-      "price": 150000,
-      "image": "Hot-drink.jpg",
-      "inventory": 12,
-      "discount": 10
+      "name": "Lazi",
+      "price": "150000 $",
+      "image": "src/assets/images/Lazi.png",
+      "inventory": 10,
+      "discount": ""
     },
     {
       "id": 3,
-      "name": "latte",
-      "price": 150000,
-      "image": "coffee-cup.png",
+      "name": "Milk Shake",
+      "price": "150000 $",
+      "image": "src/assets/images/Milk-Shake.png",
       "inventory": 12,
-      "discount": 10
+      "discount": "10 %"
     },
     {
       "id": 4,
-      "name": "herbal tea",
-      "price": 150000,
-      "image": "coffee-cup.png",
+      "name": "Iced Coffee",
+      "price": "150000 $",
+      "image": "src/assets/images/Iced-Coffee.png",
       "inventory": 12,
-      "discount": 10
+      "discount": "10 %"
     },
     {
       "id": 5,
-      "name": "Hot Chocolate",
-      "price": 150000,
-      "image": "coffee-cup.png",
+      "name": "Afogato",
+      "price": "150000 $",
+      "image": "src/assets/images/deser-afogato.png",
       "inventory": 12,
-      "discount": 10
+      "discount": "10 %"
     },
     {
       "id": 6,
-      "name": "mocha",
-      "price": 150000,
-      "image": "coffee-cup.png",
-      "inventory": 12,
-      "discount": 10
+      "name": "Wet chocolate cake",
+      "price": "150000 $",
+      "image": "src/assets/images/cake-khis-shokolati.png",
+      "inventory": 6,
+      "discount": "2 %"
     },
     {
       "id": 7,
-      "name": "latte",
-      "price": 150000,
-      "image": "coffee-cup.png",
+      "name": "Cake",
+      "price": "150000 $",
+      "image": "src/assets/images/cake-coffee-shop.png",
       "inventory": 12,
-      "discount": 10
+      "discount": "10 %"
     },
     {
       "id": 8,
-      "name": "herbal tea",
-      "price": 150000,
-      "image": "coffee-cup.png",
+      "name": "Turkish Coffee",
+      "price": "150000 $",
+      "image": "src/assets/images/TraditTurkish-Coffee.png",
       "inventory": 12,
-      "discount": 10
+      "discount": "10 %"
     },
     {
       "id": 9,
-      "name": "Hot Chocolate",
-      "price": 150000,
-      "image": "coffee-cup.png",
+      "name": "Chocolate cake ",
+      "price": "150000 $",
+      "image": "src/assets/images/Chocolate-cake-2.png",
       "inventory": 12,
-      "discount": 10
+      "discount": "10 %"
     },
     {
       "id": 10,
-      "name": "cake",
-      "price": 150000,
-      "image": "coffee-cup.png",
+      "name": "Capuccino",
+      "price": "150000 $",
+      "image": "src/assets/images/capuccino.png",
       "inventory": 12,
-      "discount": 10
+      "discount": "10 %"
     },
     {
       "id": 11,
-      "name": "fatemeh",
-      "price": 150000,
-      "image": "coffee-cup.png",
+      "name": "Green tea",
+      "price": "150000 $",
+      "image": "src/assets/images/Green tea.png",
       "inventory": 12,
-      "discount": 10
+      "discount": "10 %"
     },
     {
       "id": 12,
-      "name": "cake",
-      "price": 150000,
-      "image": "coffee-cup.png",
+      "name": "Banana Cake",
+      "price": "150000 $",
+      "image": "src/assets/images/Banana-Cake.png",
       "inventory": 12,
-      "discount": 10
+      "discount": "10 %"
     },
     {
       "id": 13,
-      "name": "cake",
-      "price": 150000,
-      "image": "coffee-cup.png",
+      "name": "Cinnamon Tea",
+      "price": "150000 $",
+      "image": "src/assets/images/Cinnamon-tea.png",
       "inventory": 12,
-      "discount": 10
+      "discount": "10 %"
     },
     {
-      "id": 14,
-      "name": "cake",
-      "price": 150000,
-      "image": "coffee-cup.png",
+      "id": 1,
+      "name": "Iced Latte",
+      "price": "150000 $",
+      "image": "src/assets/images/Smores-Iced-Latte-Recipe-7-1024x1280-removebg-preview.png",
       "inventory": 12,
-      "discount": 10
+      "discount": "10 %"
     },
     {
-      "id": 15,
-      "name": "cake",
-      "price": 150000,
-      "image": "coffee-cup.png",
+      "id": 1,
+      "name": "Iced Latte",
+      "price": "150000 $",
+      "image": "src/assets/images/Smores-Iced-Latte-Recipe-7-1024x1280-removebg-preview.png",
       "inventory": 12,
-      "discount": 10
+      "discount": "10 %"
     },
     {
-      "id": 16,
-      "name": "cake",
-      "price": 150000,
-      "image": "coffee-cup.png",
+      "id": 1,
+      "name": "Iced Latte",
+      "price": "150000 $",
+      "image": "src/assets/images/Smores-Iced-Latte-Recipe-7-1024x1280-removebg-preview.png",
       "inventory": 12,
-      "discount": 10
+      "discount": "10 %"
     },
     {
-      "id": 17,
-      "name": "cake",
-      "price": 150000,
-      "image": "coffee-cup.png",
+      "id": 1,
+      "name": "Iced Latte",
+      "price": "150000 $",
+      "image": "src/assets/images/Smores-Iced-Latte-Recipe-7-1024x1280-removebg-preview.png",
       "inventory": 12,
-      "discount": 10
+      "discount": "10 %"
     },
     {
-      "id": 18,
-      "name": "cake",
-      "price": 150000,
-      "image": "coffee-cup.png",
+      "id": 1,
+      "name": "Iced Latte",
+      "price": "150000 $",
+      "image": "src/assets/images/Smores-Iced-Latte-Recipe-7-1024x1280-removebg-preview.png",
       "inventory": 12,
-      "discount": 10
+      "discount": "10 %"
     },
     {
-      "id": 19,
-      "name": "cake",
-      "price": 150000,
-      "image": "coffee-cup.png",
+      "id": 1,
+      "name": "Iced Latte",
+      "price": "150000 $",
+      "image": "src/assets/images/Smores-Iced-Latte-Recipe-7-1024x1280-removebg-preview.png",
       "inventory": 12,
-      "discount": 10
+      "discount": "10 %"
     },
     {
-      "id": 20,
-      "name": "cake",
-      "price": 150000,
-      "image": "coffee-cup.png",
+      "id": 1,
+      "name": "Iced Latte",
+      "price": "150000 $",
+      "image": "src/assets/images/Smores-Iced-Latte-Recipe-7-1024x1280-removebg-preview.png",
       "inventory": 12,
-      "discount": 10
-    },
-    {
-      "id": 21,
-      "name": "cake",
-      "price": 150000,
-      "image": "coffee-cup.png",
-      "inventory": 12,
-      "discount": 10
-    },
-    {
-      "id": 22,
-      "name": "cake",
-      "price": 150000,
-      "image": "coffee-cup.png",
-      "inventory": 12,
-      "discount": 10
-    },
-    {
-      "id": 23,
-      "name": "Hot Chocolate",
-      "price": 150000,
-      "image": "coffee-cup.png",
-      "inventory": 12,
-      "discount": 10
-    },
-    {
-      "id": 24,
-      "name": "mocha",
-      "price": 150000,
-      "image": "coffee-cup.png",
-      "inventory": 12,
-      "discount": 10
-    },
-    {
-      "id": 25,
-      "name": "latte",
-      "price": 150000,
-      "image": "coffee-cup.png",
-      "inventory": 12,
-      "discount": 10
-    },
-    {
-      "id": 26,
-      "name": "herbal tea",
-      "price": 150000,
-      "image": "coffee-cup.png",
-      "inventory": 12,
-      "discount": 10
-    },
-    {
-      "id": 27,
-      "name": "Hot Chocolate",
-      "price": 150000,
-      "image": "coffee-cup.png",
-      "inventory": 12,
-      "discount": 10
-    },
-    {
-      "id": 28,
-      "name": "cake",
-      "price": 150000,
-      "image": "coffee-cup.png",
-      "inventory": 12,
-      "discount": 10
-    },
-    {
-      "id": 29,
-      "name": "cake",
-      "price": 150000,
-      "image": "coffee-cup.png",
-      "inventory": 12,
-      "discount": 10
-    },
-    {
-      "id": 30,
-      "name": "latte",
-      "price": 150000,
-      "image": "coffee-cup.png",
-      "inventory": 12,
-      "discount": 10
-    },
-    {
-      "id": 31,
-      "name": "cake",
-      "price": 150000,
-      "image": "coffee-cup.png",
-      "inventory": 12,
-      "discount": 10
-    },
-    {
-      "id": 32,
-      "name": "cake",
-      "price": 150000,
-      "image": "coffee-cup.png",
-      "inventory": 12,
-      "discount": 10
-    },
-    {
-      "id": 33,
-      "name": "cake",
-      "price": 150000,
-      "image": "coffee-cup.png",
-      "inventory": 12,
-      "discount": 10
-    },
-    {
-      "id": 34,
-      "name": "latte",
-      "price": 150000,
-      "image": "coffee-cup.png",
-      "inventory": 12,
-      "discount": 10
-    },
-    {
-      "id": 35,
-      "name": "cake",
-      "price": 150000,
-      "image": "coffee-cup.png",
-      "inventory": 12,
-      "discount": 10
-    },
-    {
-      "id": 36,
-      "name": "cake",
-      "price": 150000,
-      "image": "coffee-cup.png",
-      "inventory": 12,
-      "discount": 10
+      "discount": "10 %"
     }
   ]
 }

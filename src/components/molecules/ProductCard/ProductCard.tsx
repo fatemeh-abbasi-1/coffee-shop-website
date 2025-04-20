@@ -1,12 +1,15 @@
 import Button from "../../atoms/Button/Button";
 import Text from "../../atoms/Text/Text";
-import img from "./../../../assets/images/coffee-cup.png";
 import { ProductsCardProps } from "./type";
 
 const ProductCard: React.FC<ProductsCardProps> = ({ product }) => {
   return (
     <div className="md:w-[400px] h-36 bg-transparent border-4 border-mocha pl-20 relative pt-3">
-      <img src={img} alt="" className="w-[90px] h-[85px] absolute -left-12" />
+      <img
+        src={product.image}
+        alt=""
+        className="w-[90px] h-[85px] absolute -left-12"
+      />
       <div className="flex flex-row justify-between">
         <div className="flex flex-col pt-3 gap-2">
           <Text variant="small">{product.name}</Text>

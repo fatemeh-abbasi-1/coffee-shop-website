@@ -5,7 +5,7 @@ import Button from "../../atoms/Button/Button";
 const Header: React.FC = () => {
   return (
     <>
-      <header className="flex flex-row justify-between">
+      <header className="flex justify-between">
         <Logo />
         <div className="flex flex-row gap-20 pt-8">
           <NavLink variant="header" />
