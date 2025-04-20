@@ -10,7 +10,9 @@ const Section: React.FC<SectionProps> = ({
     <section
       className={`${
         backgroundColor ? backgroundColor : "bg-background-secondary"
-      } ${height ? `${height}` : "h-dvh"} pr-32 pl-32`}
+      } ${
+        height ? `${height}` : "min-h-[100svh]"
+      } w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32`}
     >
       {children}
     </section>
@@ -18,3 +20,21 @@ const Section: React.FC<SectionProps> = ({
 };
 
 export default Section;
+
+// const Section: React.FC<SectionProps> = ({
+//   backgroundColor = "bg-main-background-primary",
+//   height,
+//   children,
+// }) => {
+//   return (
+//     <section
+//       className={`${
+//         backgroundColor ? backgroundColor : "bg-background-secondary"
+//       } w-full min-h-fit px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32`}
+//     >
+//       {children}
+//     </section>
+//   );
+// };
+
+// export default Section;

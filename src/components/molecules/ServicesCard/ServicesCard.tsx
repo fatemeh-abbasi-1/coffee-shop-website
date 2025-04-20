@@ -5,7 +5,7 @@ import { ServicesSectionProps } from "./types";
 
 const ServicesCard: React.FC<ServicesSectionProps> = ({ Data }) => {
   return (
-    <div className="border-4 border-mocha bg-dark_brown w-[380px] h-[480px] flex flex-col items-center rounded-3xl ">
+    <div className="border-4 border-mocha bg-dark_brown w-[420px] h-[490px] flex flex-col items-center rounded-3xl ">
       <img src={Data.imgSrc} alt="" className="w-full h-60 rounded-t-3xl" />
       <div className="py-5 px-6 flex flex-col items-center gap-2">
         <Title size="small">{Data.title}</Title>

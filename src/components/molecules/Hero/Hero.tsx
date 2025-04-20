@@ -5,7 +5,7 @@ import img from "./../../../assets/images/coffee-cup.png";
 
 const Hero = () => {
   return (
-    <div className="pt-28 flex flex-row gap-48">
+    <div className="pt-28 flex flex-col md:flex-row gap-48">
       <div className="w-1/2 flex flex-col gap-16 pt-6">
         <Text> BIcic Coffee is Awesome</Text>
         <Title>TIME DISCOVER COFFEE HOUSE</Title>
