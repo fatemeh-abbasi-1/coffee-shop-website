@@ -18,11 +18,11 @@
     },
     {
       "id": 3,
-      "name": "Milk Shake",
+      "name": "Ice Cream",
       "price": "150000 $",
-      "image": "src/assets/images/Milk-Shake.png",
-      "inventory": 12,
-      "discount": "10 %"
+      "image": "src/assets/images/Ice-cream.png",
+      "inventory": 10,
+      "discount": ""
     },
     {
       "id": 4,
@@ -50,7 +50,7 @@
     },
     {
       "id": 7,
-      "name": "Cake",
+      "name": "Walnut cake",
       "price": "150000 $",
       "image": "src/assets/images/cake-coffee-shop.png",
       "inventory": 12,
@@ -105,58 +105,42 @@
       "discount": "10 %"
     },
     {
-      "id": 1,
-      "name": "Iced Latte",
+      "id": 14,
+      "name": "Americano",
       "price": "150000 $",
-      "image": "src/assets/images/Smores-Iced-Latte-Recipe-7-1024x1280-removebg-preview.png",
+      "image": "src/assets/images/Americano.png",
       "inventory": 12,
       "discount": "10 %"
     },
     {
-      "id": 1,
-      "name": "Iced Latte",
+      "id": 15,
+      "name": "Macchiato",
       "price": "150000 $",
-      "image": "src/assets/images/Smores-Iced-Latte-Recipe-7-1024x1280-removebg-preview.png",
+      "image": "src/assets/images/Macchiato.png",
       "inventory": 12,
       "discount": "10 %"
     },
     {
-      "id": 1,
-      "name": "Iced Latte",
+      "id": 16,
+      "name": "Carrot cake",
       "price": "150000 $",
-      "image": "src/assets/images/Smores-Iced-Latte-Recipe-7-1024x1280-removebg-preview.png",
+      "image": "src/assets/images/Carrot-Cake.png",
       "inventory": 12,
       "discount": "10 %"
     },
     {
-      "id": 1,
-      "name": "Iced Latte",
+      "id": 17,
+      "name": "Hot chocolate",
       "price": "150000 $",
-      "image": "src/assets/images/Smores-Iced-Latte-Recipe-7-1024x1280-removebg-preview.png",
+      "image": "src/assets/images/Hot-Chocolate.png",
       "inventory": 12,
       "discount": "10 %"
     },
     {
-      "id": 1,
-      "name": "Iced Latte",
+      "id": 18,
+      "name": "Milk Shake",
       "price": "150000 $",
-      "image": "src/assets/images/Smores-Iced-Latte-Recipe-7-1024x1280-removebg-preview.png",
-      "inventory": 12,
-      "discount": "10 %"
-    },
-    {
-      "id": 1,
-      "name": "Iced Latte",
-      "price": "150000 $",
-      "image": "src/assets/images/Smores-Iced-Latte-Recipe-7-1024x1280-removebg-preview.png",
-      "inventory": 12,
-      "discount": "10 %"
-    },
-    {
-      "id": 1,
-      "name": "Iced Latte",
-      "price": "150000 $",
-      "image": "src/assets/images/Smores-Iced-Latte-Recipe-7-1024x1280-removebg-preview.png",
+      "image": "src/assets/images/Milk-Shake.png",
       "inventory": 12,
       "discount": "10 %"
     }

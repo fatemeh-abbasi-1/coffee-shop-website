@@ -1,6 +1,7 @@
 import { ButtonProps } from "./types";
 
 const Button: React.FC<ButtonProps> = ({
+  onClick,
   variant = "large-primary",
   children,
 }) => {
@@ -15,7 +16,11 @@ const Button: React.FC<ButtonProps> = ({
       ? "w-28 h-10 bg-white text-mocha text-sm"
       : "";
 
-  return <button className={`${baseStyles} ${sizeStyles}`}>{children}</button>;
+  return (
+    <button className={`${baseStyles} ${sizeStyles}`} onClick={onClick}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;
