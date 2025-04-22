@@ -4,6 +4,7 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   variant = "large-primary",
   children,
+className,
 }) => {
   const baseStyles = "rounded-full font-bold";
 
@@ -17,7 +18,7 @@ const Button: React.FC<ButtonProps> = ({
       : "";
 
   return (
-    <button className={`${baseStyles} ${sizeStyles}`} onClick={onClick}>
+    <button className={`${baseStyles} ${sizeStyles} ${className}`} onClick={onClick}>
       {children}
     </button>
   );
