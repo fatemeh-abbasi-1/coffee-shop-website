@@ -60,7 +60,7 @@ export const editProducts = createAsyncThunk(
       }
     );
 
-    return patchRes.data;
+    return { selectedProduct: getRes.data, editedData: patchRes.data };
   }
 );
 
@@ -98,8 +98,9 @@ export const productsSlice = createSlice({
     // edit
     builder.addCase(
       editProducts.fulfilled,
-      (state, action: PayloadAction<Product>) => {
-        state.selectedProducts.push();
+      (state, action: PayloadAction<{ selectedProduct: Product }>) => {
+        const { selectedProduct } = action.payload;
+        state.selectedProducts = [...state.selectedProducts, selectedProduct];
         console.log(state.selectedProducts);
       }
     );

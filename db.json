@@ -5,7 +5,7 @@
       "name": "Iced Latte",
       "price": "150000 $",
       "image": "src/assets/images/Smores-Iced-Latte-Recipe-7-1024x1280-removebg-preview.png",
-      "inventory": 10,
+      "inventory": 2,
       "discount": "13 %"
     },
     {
@@ -13,7 +13,7 @@
       "name": "Lazi",
       "price": "150000 $",
       "image": "src/assets/images/Lazi.png",
-      "inventory": 9,
+      "inventory": -1,
       "discount": ""
     },
     {
@@ -21,7 +21,7 @@
       "name": "Ice Cream",
       "price": "150000 $",
       "image": "src/assets/images/Ice-cream.png",
-      "inventory": 5,
+      "inventory": -3,
       "discount": ""
     },
     {
@@ -29,7 +29,7 @@
       "name": "Iced Coffee",
       "price": "150000 $",
       "image": "src/assets/images/Iced-Coffee.png",
-      "inventory": 9,
+      "inventory": 2,
       "discount": "10 %"
     },
     {
@@ -37,7 +37,7 @@
       "name": "Afogato",
       "price": "150000 $",
       "image": "src/assets/images/deser-afogato.png",
-      "inventory": 8,
+      "inventory": -1,
       "discount": "10 %"
     },
     {
@@ -45,7 +45,7 @@
       "name": "Wet chocolate cake",
       "price": "150000 $",
       "image": "src/assets/images/cake-khis-shokolati.png",
-      "inventory": 5,
+      "inventory": 4,
       "discount": "2 %"
     },
     {
@@ -53,7 +53,7 @@
       "name": "Walnut cake",
       "price": "150000 $",
       "image": "src/assets/images/cake-coffee-shop.png",
-      "inventory": 10,
+      "inventory": 9,
       "discount": "10 %"
     },
     {
@@ -61,7 +61,7 @@
       "name": "Turkish Coffee",
       "price": "150000 $",
       "image": "src/assets/images/TraditTurkish-Coffee.png",
-      "inventory": 10,
+      "inventory": 8,
       "discount": "10 %"
     },
     {
@@ -77,7 +77,7 @@
       "name": "Capuccino",
       "price": "150000 $",
       "image": "src/assets/images/capuccino.png",
-      "inventory": 12,
+      "inventory": 10,
       "discount": "10 %"
     },
     {
@@ -101,7 +101,7 @@
       "name": "Cinnamon Tea",
       "price": "150000 $",
       "image": "src/assets/images/Cinnamon-tea.png",
-      "inventory": 12,
+      "inventory": 8,
       "discount": "10 %"
     },
     {
@@ -109,7 +109,7 @@
       "name": "Americano",
       "price": "150000 $",
       "image": "src/assets/images/Americano.png",
-      "inventory": 11,
+      "inventory": 10,
       "discount": "10 %"
     },
     {
@@ -125,7 +125,7 @@
       "name": "Carrot cake",
       "price": "150000 $",
       "image": "src/assets/images/Carrot-Cake.png",
-      "inventory": 12,
+      "inventory": 8,
       "discount": "10 %"
     },
     {
@@ -133,7 +133,7 @@
       "name": "Hot chocolate",
       "price": "150000 $",
       "image": "src/assets/images/Hot-Chocolate.png",
-      "inventory": 12,
+      "inventory": 11,
       "discount": "10 %"
     },
     {

@@ -13,17 +13,16 @@ const ProductCard: React.FC<ProductsCardProps> = ({ product }) => {
   const dispatch = useDispatch<AppDispatch>();
 
   const [isHidden, setIsHidden] = useState(false);
-  const nameRef = useRef<HTMLSpanElement>(null);
+  const idRef = useRef<HTMLSpanElement>(null);
 
-  const handleClick = () => {
-    // console.log(Number(nameRef.current?.textContent));
+  const addToCard = () => {
     setIsHidden(true);
-    dispatch(editProducts(Number(nameRef.current?.textContent)));
+    dispatch(editProducts(Number(idRef.current?.textContent)));
   };
 
   return (
     <div className="md:w-[400px] h-36 bg-transparent border-4 border-mocha pl-20 relative pt-3">
-      <span ref={nameRef} className="hidden">
+      <span ref={idRef} className="hidden">
         {product.id}
       </span>
       <img
@@ -40,13 +39,12 @@ const ProductCard: React.FC<ProductsCardProps> = ({ product }) => {
         <span className="p-4 border-l-2 mt-3 border-mocha h-20">
           <Button
             variant="small"
-            onClick={handleClick}
+            onClick={addToCard}
             className={isHidden ? "hidden" : ""}
           >
             Add To Card
           </Button>
-          {isHidden && <NumberProductSelected />}
-          {/* <Text variant="small">10%</Text> */}
+          {isHidden && <NumberProductSelected productId={product.id} />}
         </span>
       </div>
     </div>
