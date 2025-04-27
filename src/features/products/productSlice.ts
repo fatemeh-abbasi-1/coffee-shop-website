@@ -17,6 +17,7 @@ export interface ProductsState {
   fetchStatus: "idle" | "loading" | "succeeded" | "failed";
   error: string | null;
   page: number;
+
 }
 
 const initialState: ProductsState = {
@@ -25,6 +26,7 @@ const initialState: ProductsState = {
   fetchStatus: "idle",
   error: null,
   page: 1,
+  
 };
 
 export const fetchProducts = createAsyncThunk<Product[], number>(
@@ -43,8 +45,8 @@ export const fetchProducts = createAsyncThunk<Product[], number>(
   }
 );
 
-export const editProducts = createAsyncThunk(
-  "products/editProducts",
+export const addProductInCard = createAsyncThunk(
+  "products/addProductInCard",
   async (productId: number) => {
     const getRes = await axios.get(
       `http://localhost:3000/products/${productId}`
@@ -61,6 +63,24 @@ export const editProducts = createAsyncThunk(
     );
 
     return { selectedProduct: getRes.data, editedData: patchRes.data };
+  }
+);
+
+export const removeProductFromCard = createAsyncThunk(
+  "products/removeProductFromCard",
+  async (productId: number) => {
+    const getRes = await axios.get(
+      `http://localhost:3000/products/${productId}`
+    );
+    console.log(getRes.data);
+
+    const currentProduct = getRes.data;
+    const updatedInventory = currentProduct.inventory + 1;
+    await axios.patch(`http://localhost:3000/products/${productId}`, {
+      inventory: updatedInventory,
+    });
+
+    return getRes.data;
   }
 );
 
@@ -95,17 +115,31 @@ export const productsSlice = createSlice({
         state.error = action.error.message || "Error... ";
       });
 
-    // edit
+    // add to card
     builder.addCase(
-      editProducts.fulfilled,
+      addProductInCard.fulfilled,
       (state, action: PayloadAction<{ selectedProduct: Product }>) => {
         const { selectedProduct } = action.payload;
         state.selectedProducts = [...state.selectedProducts, selectedProduct];
         console.log(state.selectedProducts);
       }
     );
+
+    //remove from card
+    builder.addCase(removeProductFromCard.fulfilled, (state, action) => {
+      const selectedProduct = action.payload;
+
+      const index = state.selectedProducts.findIndex(
+        (p) => p.id === selectedProduct.id
+      );
+      if (index !== -1) {
+        state.selectedProducts.splice(index, 1);
+        console.log(state.selectedProducts);
+      }
+    });
   },
 });
 
-export const { incrementPage, decrementPage } = productsSlice.actions;
+export const { incrementPage, decrementPage } =
+  productsSlice.actions;
 export default productsSlice.reducer;

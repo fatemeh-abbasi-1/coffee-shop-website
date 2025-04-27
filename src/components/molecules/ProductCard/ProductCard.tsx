@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../../app/store";
-import { editProducts } from "../../../features/products/productSlice";
+import { addProductInCard } from "../../../features/products/productSlice";
 
 import { ProductsCardProps } from "./type";
 
@@ -17,7 +17,7 @@ const ProductCard: React.FC<ProductsCardProps> = ({ product }) => {
 
   const addToCard = () => {
     setIsHidden(true);
-    dispatch(editProducts(Number(idRef.current?.textContent)));
+    dispatch(addProductInCard(Number(idRef.current?.textContent)));
   };
 
   return (
@@ -44,7 +44,14 @@ const ProductCard: React.FC<ProductsCardProps> = ({ product }) => {
           >
             Add To Card
           </Button>
-          {isHidden && <NumberProductSelected productId={product.id} />}
+
+          {isHidden && (
+            <NumberProductSelected
+              productId={product.id}
+              isHidden={isHidden}
+              setIsHidden={setIsHidden}
+            />
+          )}
         </span>
       </div>
     </div>
