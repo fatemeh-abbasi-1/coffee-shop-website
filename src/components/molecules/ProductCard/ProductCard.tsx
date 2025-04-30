@@ -1,6 +1,6 @@
-import { useRef, useState } from "react";
-import { useDispatch } from "react-redux";
-import { AppDispatch } from "../../../app/store";
+import { useRef, useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "../../../app/store";
 import { addProductInCard } from "../../../features/products/productSlice";
 
 import { ProductsCardProps } from "./type";
@@ -10,15 +10,29 @@ import Text from "../../atoms/Text/Text";
 import NumberProductSelected from "../NumberProductSelected/NumberProductSelected";
 
 const ProductCard: React.FC<ProductsCardProps> = ({ product }) => {
+  const selectedProducts = useSelector(
+    (state: RootState) => state.products.selectedProducts
+  );
+ 
+
   const dispatch = useDispatch<AppDispatch>();
 
   const [isHidden, setIsHidden] = useState(false);
   const idRef = useRef<HTMLSpanElement>(null);
 
   const addToCard = () => {
-    setIsHidden(true);
     dispatch(addProductInCard(Number(idRef.current?.textContent)));
   };
+
+  const count = selectedProducts.filter((p) => p.id === product.id).length;
+
+  useEffect(() => {
+    if (count > 0) {
+      setIsHidden(true);
+    } else {
+      setIsHidden(false);
+    }
+  }, [count]);
 
   return (
     <div className="md:w-[400px] h-36 bg-transparent border-4 border-mocha pl-20 relative pt-3">
@@ -38,7 +52,7 @@ const ProductCard: React.FC<ProductsCardProps> = ({ product }) => {
 
         <span className="p-4 border-l-2 mt-3 border-mocha h-20">
           <Button
-            variant="small"
+            variant="small-secondary"
             onClick={addToCard}
             className={isHidden ? "hidden" : ""}
           >

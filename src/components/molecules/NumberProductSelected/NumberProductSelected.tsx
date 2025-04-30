@@ -10,24 +10,14 @@ import { NumberProductSelectedProps } from "./types";
 import Trash from "../../../assets/icons/Trash";
 import Plus from "../../../assets/icons/Plus";
 import Text from "../../atoms/Text/Text";
-import { useEffect } from "react";
 
 const NumberProductSelected: React.FC<NumberProductSelectedProps> = ({
   productId,
-  setIsHidden,
 }) => {
   const dispatch = useDispatch<AppDispatch>();
   const selectedProducts = useSelector(
     (state: RootState) => state.products.selectedProducts
   );
-
-  const count = selectedProducts.filter((p) => p.id === productId).length;
-
-  useEffect(() => {
-    if (count === 0) {
-      setIsHidden(false);
-    }
-  }, [count]);
 
   const plusClick = () => {
     dispatch(addProductInCard(productId));
@@ -44,7 +34,7 @@ const NumberProductSelected: React.FC<NumberProductSelectedProps> = ({
       >
         <Trash />
       </span>
-      <Text>{count}</Text>
+      <Text>{selectedProducts.filter((p) => p.id === productId).length}</Text>
 
       <span className="text-white mt-1 cursor-pointer" onClick={plusClick}>
         <Plus />

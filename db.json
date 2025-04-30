@@ -5,7 +5,7 @@
       "name": "Iced Latte",
       "price": "150000 $",
       "image": "src/assets/images/Smores-Iced-Latte-Recipe-7-1024x1280-removebg-preview.png",
-      "inventory": 7,
+      "inventory": -1,
       "discount": "13 %"
     },
     {
@@ -13,7 +13,7 @@
       "name": "Lazi",
       "price": "150000 $",
       "image": "src/assets/images/Lazi.png",
-      "inventory": 8,
+      "inventory": 6,
       "discount": ""
     },
     {
@@ -21,7 +21,7 @@
       "name": "Ice Cream",
       "price": "150000 $",
       "image": "src/assets/images/Ice-cream.png",
-      "inventory": 96,
+      "inventory": 94,
       "discount": ""
     },
     {
@@ -29,7 +29,7 @@
       "name": "Iced Coffee",
       "price": "150000 $",
       "image": "src/assets/images/Iced-Coffee.png",
-      "inventory": 21,
+      "inventory": 17,
       "discount": "10 %"
     },
     {
@@ -37,7 +37,7 @@
       "name": "Afogato",
       "price": "150000 $",
       "image": "src/assets/images/deser-afogato.png",
-      "inventory": 66,
+      "inventory": 62,
       "discount": "10 %"
     },
     {
@@ -45,7 +45,7 @@
       "name": "Wet chocolate cake",
       "price": "150000 $",
       "image": "src/assets/images/cake-khis-shokolati.png",
-      "inventory": 38,
+      "inventory": 37,
       "discount": "2 %"
     },
     {
@@ -61,7 +61,7 @@
       "name": "Turkish Coffee",
       "price": "150000 $",
       "image": "src/assets/images/TraditTurkish-Coffee.png",
-      "inventory": 15,
+      "inventory": 14,
       "discount": "10 %"
     },
     {
@@ -69,7 +69,7 @@
       "name": "Chocolate cake ",
       "price": "150000 $",
       "image": "src/assets/images/Chocolate-cake-2.png",
-      "inventory": 63,
+      "inventory": 62,
       "discount": "10 %"
     },
     {
@@ -139,6 +139,39 @@
     {
       "id": "18",
       "name": "Milk Shake",
+      "price": "150000 $",
+      "image": "src/assets/images/Milk-Shake.png",
+      "inventory": 27,
+      "discount": "10 %"
+    },
+    {
+      "id": "19",
+      "name": "Test",
+      "price": "150000 $",
+      "image": "src/assets/images/Milk-Shake.png",
+      "inventory": 27,
+      "discount": "10 %"
+    },
+    {
+      "id": "20",
+      "name": "Test",
+      "price": "150000 $",
+      "image": "src/assets/images/Milk-Shake.png",
+      "inventory": 27,
+      "discount": "10 %"
+    },
+    {
+      "id": "21",
+      "name": "Test",
+      "price": "150000 $",
+      "image": "src/assets/images/Milk-Shake.png",
+      "inventory": 27,
+      "discount": "10 %"
+    },
+
+    {
+      "id": "22",
+      "name": "Test",
       "price": "150000 $",
       "image": "src/assets/images/Milk-Shake.png",
       "inventory": 27,

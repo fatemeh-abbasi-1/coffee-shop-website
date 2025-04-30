@@ -12,26 +12,28 @@ import { RootState, AppDispatch } from "../../../app/store";
 import LeftArrowSvg from "../../../assets/icons/LeftArrowSvg";
 import RightArrowSvg from "../../../assets/icons/RightArrowSvg";
 import Section from "../../atoms/Section/Section";
+import Button from "../../atoms/Button/Button";
 
 const ProductsMenuSection: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const products = useSelector((state: RootState) => state.products.products);
   const page = useSelector((state: RootState) => state.products.page);
+  const totalCount = useSelector(
+    (state: RootState) => state.products.totalCount
+  );
+  console.log(totalCount);
 
   useEffect(() => {
     dispatch(fetchProducts(page));
   }, [page, dispatch]);
 
-  const handleArrowRightClick = () => {
+  const goToNext = () => {
     dispatch(incrementPage());
   };
 
-  const handleArrowLeftClick = () => {
+  const goToPrew = () => {
     dispatch(decrementPage());
   };
-
-  const baseStyleArrows =
-    "w-14 text-mocha bg-white p-2 rounded-full cursor-pointer";
 
   return (
     <Section backgroundColor={"bg-main-background-secondary"}>
@@ -45,12 +47,16 @@ const ProductsMenuSection: React.FC = () => {
           ))}
         </div>
         <div className="flex flex-row gap-4 self-center">
-          <span className={baseStyleArrows} onClick={handleArrowLeftClick}>
+          <Button variant="icon" onClick={goToPrew} disabled={page === 1}>
             <LeftArrowSvg />
-          </span>
-          <span className={baseStyleArrows} onClick={handleArrowRightClick}>
+          </Button>
+          <Button
+            variant="icon"
+            onClick={goToNext}
+            disabled={page === Math.ceil(totalCount / 9)}
+          >
             <RightArrowSvg />
-          </span>
+          </Button>
         </div>
       </div>
     </Section>

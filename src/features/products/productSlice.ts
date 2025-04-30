@@ -17,7 +17,7 @@ export interface ProductsState {
   fetchStatus: "idle" | "loading" | "succeeded" | "failed";
   error: string | null;
   page: number;
-
+  totalCount: number;
 }
 
 const initialState: ProductsState = {
@@ -26,24 +26,30 @@ const initialState: ProductsState = {
   fetchStatus: "idle",
   error: null,
   page: 1,
-  
+  totalCount: 0,
 };
 
-export const fetchProducts = createAsyncThunk<Product[], number>(
-  "product/fetchProducts",
-  async (page) => {
-    const response = await axios.get(
-      `http://localhost:3000/products?_start=${page * 9 - 9}&_end=${page * 9}
-`,
-      {
-        headers: {
-          Accept: "application/json",
-        },
-      }
-    );
-    return response.data;
-  }
-);
+export const fetchProducts = createAsyncThunk<
+  { data: Product[]; totalCount: number },
+  number
+>("product/fetchProducts", async (page: number) => {
+  const response = await axios.get(
+    `http://localhost:3000/products?_start=${page * 9 - 9}&_end=${page * 9}
+    `,
+    {
+      headers: {
+        Accept: "application/json",
+      },
+    }
+  );
+  const totalCount = await axios.get(`http://localhost:3000/products`, {
+    headers: {
+      Accept: "application/json",
+    },
+  });
+  console.log(totalCount.data.length);
+  return { data: response.data, totalCount: totalCount.data.length };
+});
 
 export const addProductInCard = createAsyncThunk(
   "products/addProductInCard",
@@ -103,11 +109,15 @@ export const productsSlice = createSlice({
       })
       .addCase(
         fetchProducts.fulfilled,
-        (state, action: PayloadAction<Product[]>) => {
+        (
+          state,
+          action: PayloadAction<{ data: Product[]; totalCount: number }>
+        ) => {
           state.fetchStatus = "succeeded";
-          console.log(action.payload);
+          const { data, totalCount } = action.payload;
 
-          state.products = action.payload;
+          state.products = data;
+          state.totalCount = totalCount;
         }
       )
       .addCase(fetchProducts.rejected, (state, action) => {
@@ -140,6 +150,5 @@ export const productsSlice = createSlice({
   },
 });
 
-export const { incrementPage, decrementPage } =
-  productsSlice.actions;
+export const { incrementPage, decrementPage } = productsSlice.actions;
 export default productsSlice.reducer;
