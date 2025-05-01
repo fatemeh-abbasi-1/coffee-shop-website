@@ -7,8 +7,8 @@ import { AppDispatch, RootState } from "../../../app/store";
 
 import { NumberProductSelectedProps } from "./types";
 
-import Trash from "../../../assets/icons/Trash";
-import Plus from "../../../assets/icons/Plus";
+import Trash from "../../../assets/icons/TrashSvg";
+import Plus from "../../../assets/icons/PlusSvg";
 import Text from "../../atoms/Text/Text";
 
 const NumberProductSelected: React.FC<NumberProductSelectedProps> = ({

@@ -4,8 +4,9 @@ import { RootState } from "../../../app/store";
 import Logo from "../../atoms/Logo/Logo";
 import NavLink from "../../molecules/NavLink/NavLink";
 import Button from "../../atoms/Button/Button";
+import Hr from "../../atoms/Hr/Hr";
 
-import ShoppingCard from "../../../assets/icons/ShoppingCard";
+import ShoppingCard from "../../../assets/icons/ShoppingCardSvg";
 
 const Header: React.FC = () => {
   const selectedProducts = useSelector(
@@ -27,7 +28,7 @@ const Header: React.FC = () => {
           <Button variant="large-secondary">Sign Up</Button>
         </div>
       </header>
-      <hr className="border border-mocha" />
+      <Hr />
     </>
   );
 };
