@@ -9,9 +9,9 @@ module.exports = {
       },
       backgroundImage: {
         "main-background-primary":
-          "linear-gradient(166deg, rgba(96,70,43,1) 0%, rgba(59,32,9,1) 42%, rgba(59,28,14,1) 100%)",
+          "linear-gradient(166deg, #3F2A1A 0%, #2D1808 42%, #30190A 100%);",
         "main-background-secondary":
-          "linear-gradient(15deg, rgba(96,70,43,1) 0%, rgba(59,32,9,1) 42%, rgba(59,28,14,1) 100%)",
+          " linear-gradient(15deg, #3F2A1A 0%, #2D1808 42%, #30190A 100%);",
       },
     },
   },

@@ -1,3 +1,3 @@
-export  type SocialLinksProps = {
-  className: string,
+export type SocialLinksProps = {
+  className?: string;
 };

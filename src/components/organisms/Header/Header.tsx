@@ -1,10 +1,11 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../../../app/store";
 
-import Logo from "../../atoms/Logo/Logo";
+
 import NavLink from "../../molecules/NavLink/NavLink";
 import Button from "../../atoms/Button/Button";
 import Hr from "../../atoms/Hr/Hr";
+import Logo from "../../atoms/Logo/Logo";
 
 import ShoppingCard from "../../../assets/icons/ShoppingCardSvg";
 
@@ -17,6 +18,7 @@ const Header: React.FC = () => {
     <>
       <header className="flex justify-between">
         <Logo />
+
         <div className="flex flex-row gap-20 pt-8 relative">
           <NavLink variant="header" />
           <p className="bg-green-500 rounded-full w-7 h-5 font-bold text-center absolute top-6 left-[417px]">

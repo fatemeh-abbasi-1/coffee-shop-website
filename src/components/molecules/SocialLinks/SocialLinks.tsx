@@ -4,12 +4,20 @@ import WhatsApp from "../../../assets/icons/WhatsApp";
 
 import { SocialLinksProps } from "./types";
 
+const baseStyle = "w-12 text-white";
+
 const SocialLinks: React.FC<SocialLinksProps> = ({ className }) => {
   return (
-    <div className={`${className}`}>
-      <Instagram />
-      <Telegram />
-      <WhatsApp />
+    <div className={`flex  gap-6 ${className}`}>
+      <a href="#" className={baseStyle}>
+        <Instagram />
+      </a>
+      <a href="#" className={baseStyle}>
+        <Telegram />
+      </a>
+      <a href="#" className={baseStyle}>
+        <WhatsApp />
+      </a>
     </div>
   );
 };

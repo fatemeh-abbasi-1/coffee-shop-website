@@ -52,7 +52,7 @@ const ProductCard: React.FC<ProductsCardProps> = ({ product }) => {
 
         <span className="p-4 border-l-2 mt-3 border-mocha h-20">
           <Button
-            variant="small-secondary"
+            variant="small"
             onClick={addToCard}
             className={isHidden ? "hidden" : ""}
           >
