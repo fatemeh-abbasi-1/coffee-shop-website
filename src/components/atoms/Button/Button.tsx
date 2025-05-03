@@ -9,7 +9,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   const baseStylesPrimary =
     "rounded-full font-bold outline outline-4 outline-mocha text-white";
-  const baseStylesSecondary = " rounded-full font-bold  bg-white text-mocha";
+  const baseStylesSecondary = "rounded-full font-bold  bg-white text-mocha";
 
   const sizeStyles =
     variant === "large-primary"
@@ -19,7 +19,7 @@ const Button: React.FC<ButtonProps> = ({
       : variant === "small"
       ? `w-28 h-10  text-sm ${baseStylesSecondary}`
       : variant === "submit"
-      ? `w-28 h-10 bg-transparent text-sm ${baseStylesPrimary}`
+      ? `w-80 h-12 bg-white font-bold rounded-lg bg-dark_brown1`
       : variant === "icon"
       ? "w-12 h-12 bg-white p-3 text-mocha rounded-full flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
       : "";

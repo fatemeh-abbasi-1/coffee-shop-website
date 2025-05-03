@@ -1,3 +1,3 @@
 export type InputProps = {
-  type: "text" | "password";
+  type: string;
 };
