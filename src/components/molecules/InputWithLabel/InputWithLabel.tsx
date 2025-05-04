@@ -13,7 +13,7 @@ const InputWithLable: React.FC<InputWithLableProps> = ({
       <label htmlFor={id}>
         <Text variant="small">{labelText}</Text>
       </label>
-      <Input type={type}></Input>
+      <Input type={type} />
     </div>
   );
 };
