@@ -19,7 +19,7 @@ const Button: React.FC<ButtonProps> = ({
       : variant === "small"
       ? `w-28 h-10  text-sm ${baseStylesSecondary}`
       : variant === "submit"
-      ? `w-80 h-12 bg-white font-bold rounded-lg bg-dark_brown1`
+      ? `w-96 h-14 bg-mocha font-bold rounded-lg`
       : variant === "icon"
       ? "w-12 h-12 bg-white p-3 text-mocha rounded-full flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
       : "";
