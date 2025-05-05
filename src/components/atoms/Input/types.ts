@@ -1,4 +1,5 @@
 export type InputProps = {
-  type: string;
-  ref?: React.ReactNode;
+  type: "text" | "password";
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  value?: string;
 };

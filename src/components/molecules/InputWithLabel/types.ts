@@ -1,11 +1,7 @@
 export type InputWithLableProps = {
-  type: string;
+  type: "text" | "password";
   labelText: string;
   id: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  value?: string;
 };
-
-
-
-
-
-

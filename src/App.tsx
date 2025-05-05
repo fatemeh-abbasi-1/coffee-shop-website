@@ -4,7 +4,7 @@
 // import Header from "./components/organisms/Header/Header";
 // import ServicesSection from "./components/organisms/ServicesSection/ServicesSection";
 // import Footer from "./components/organisms/Footer/Footer";
- import Register from "./components/organisms/Register/Register";
+import Register from "./components/organisms/Register/Register";
 // import Login from "./components/organisms/Login/Login";
 
 function App() {

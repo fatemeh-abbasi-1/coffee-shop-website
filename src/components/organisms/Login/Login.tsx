@@ -1,3 +1,5 @@
+import {useEffect, useRef } from "react";
+
 import Section from "../../atoms/Section/Section";
 import Text from "../../atoms/Text/Text";
 import Title from "../../atoms/Title/Title";
@@ -7,6 +9,12 @@ import Button from "../../atoms/Button/Button";
 import coffee from "../../../assets/images/Login-Coffee.png";
 
 const Login = () => {
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
+
   return (
     <Section>
       <div className="flex justify-center pt-32">
@@ -16,6 +24,7 @@ const Login = () => {
             type="text"
             labelText="Email Address"
             id="login email"
+            ref={inputRef}
           />
           <InputWithLable
             type="password"
