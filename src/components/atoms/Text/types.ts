@@ -1,5 +1,5 @@
 export type TextProps = {
-  variant?: " large " | "medium" | "small" | "smaller";
+  variant?: "large" | "medium" | "small" | "smaller";
   className?: string;
   children: React.ReactNode;
 };

@@ -8,7 +8,7 @@ const Text: React.FC<TextProps> = ({
   const baseStyles = "text-creamy_white";
 
   const sizeStyles =
-    variant === " large "
+    variant === "large"
       ? "text-lg md:text-3xl"
       : variant === "medium"
       ? "text-base md:text-2xl"
