@@ -4,4 +4,7 @@ export type InputWithLableProps = {
   id: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   value?: string;
+  onBlur?: () => void;
+  onFocus?: () => void;
+  className?: React.ReactNode;
 };

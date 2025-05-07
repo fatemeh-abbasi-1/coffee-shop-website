@@ -6,7 +6,7 @@ const Title: React.FC<TitleProps> = ({
   size = "large",
   className = "",
 }) => {
-  const baseStyles = "text-white font-bold";
+  const baseStyles = "text-creamy_white font-bold";
 
   const sizeStyles = (() => {
     switch (size) {

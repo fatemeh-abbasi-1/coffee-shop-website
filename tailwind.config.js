@@ -7,6 +7,7 @@ module.exports = {
         mocha: "#754c36",
         dark_brown1: "#412405",
         dark_brown2: "#30190A",
+        creamy_white: "#eddcc6",
       },
       backgroundImage: {
         "main-background-primary":

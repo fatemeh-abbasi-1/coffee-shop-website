@@ -5,14 +5,16 @@ const Text: React.FC<TextProps> = ({
   variant = "medium",
   className = "",
 }) => {
-  const baseStyles = "text-white text-gray-800";
+  const baseStyles = "text-creamy_white";
 
   const sizeStyles =
     variant === " large "
       ? "text-lg md:text-3xl"
+      : variant === "medium"
+      ? "text-base md:text-2xl"
       : variant === "small"
       ? "text-sm md:text-xl"
-      : "text-base md:text-2xl";
+      : "text-sm bg-transparent rounded-full px-2";
 
   const combinedClass = `${baseStyles} ${sizeStyles} ${className}`;
 
