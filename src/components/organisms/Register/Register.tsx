@@ -1,3 +1,7 @@
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../../firebase/firebase";
+import { useNavigate } from "react-router-dom";
+
 import { useEffect, useRef, useState } from "react";
 
 import Section from "../../atoms/Section/Section";
@@ -5,33 +9,36 @@ import InputWithLable from "../../molecules/InputWithLabel/InputWithLabel";
 import Button from "../../atoms/Button/Button";
 import Title from "../../atoms/Title/Title";
 import Text from "../../atoms/Text/Text";
+// import { saveInfoToLocal } from "./index";
 
 import Americano from "../../../assets/images/Americano.png";
 
 const Register = () => {
+  const navigate = useNavigate();
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const nameRegex = /^[\u0600-\u06FFa-zA-Z]{5,}$/;
+  // const nameRegex = /^[\u0600-\u06FFa-zA-Z]{5,}$/;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
-  const [name, setName] = useState("");
+  //const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const [validName, setValidName] = useState(false);
+  // const [validName, setValidName] = useState(false);
   const [validEmail, setValidEmail] = useState(false);
   const [validPassword, setValidPassword] = useState(false);
 
-  const [nameFocus, setNameFocus] = useState(false);
+  //const [nameFocus, setNameFocus] = useState(false);
   const [emailFocus, setEmailFocus] = useState(false);
   const [passwordFocus, setPasswordFocus] = useState(false);
 
-  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
 
-  useEffect(() => {
-    setValidName(nameRegex.test(name));
-  }, [name]);
+  // useEffect(() => {
+  //   setValidName(nameRegex.test(name));
+  // }, [name]);
 
   useEffect(() => {
     setValidEmail(emailRegex.test(email));
@@ -45,14 +52,26 @@ const Register = () => {
     inputRef.current?.focus();
   }, []);
 
-  const handleClick = () => {
-    if (validName && validEmail && validPassword) {
-      setError(false);
-      setName("");
+  const handleClick = async () => {
+    try {
+      const sendInfo = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      console.log(sendInfo.user);
+      setSuccess(true);
+      setError("");
       setEmail("");
       setPassword("");
-    } else {
-      setError(true);
+      navigate('/home')
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        setError(error.message);
+        setSuccess(false);
+      } else {
+        setError("An error has occurred.");
+      }
     }
   };
 
@@ -61,7 +80,7 @@ const Register = () => {
       <div className="flex justify-center pt-32">
         <div className="flex flex-col gap-6 w-1/3 bg-dark_brown2 py-10 px-10 items-center border border-mocha">
           <Title size="medium">REGISTER</Title>
-          <div className="flex flex-col gap-3">
+          {/* <div className="flex flex-col gap-3">
             <InputWithLable
               className={
                 error && !nameFocus && !validName && "border-4 border-red-600"
@@ -80,7 +99,7 @@ const Register = () => {
             {!validName && nameFocus && name && (
               <Text variant="smaller">Must be at least 5 characters.</Text>
             )}
-          </div>
+          </div> */}
           <div className="flex flex-col gap-3">
             <InputWithLable
               className={

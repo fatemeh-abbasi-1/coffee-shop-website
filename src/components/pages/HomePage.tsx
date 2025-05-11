@@ -7,7 +7,6 @@ const HomePage = () => {
   return (
     <>
       <MainTemplate>
-        
         <Hero />
         <ProductsMenuSection />
         <ServicesSection />

@@ -5,7 +5,7 @@
       "name": "Iced Latte",
       "price": "150000 $",
       "image": "src/assets/images/Smores-Iced-Latte-Recipe-7-1024x1280-removebg-preview.png",
-      "inventory": -1,
+      "inventory": 45,
       "discount": "13 %"
     },
     {
@@ -13,7 +13,7 @@
       "name": "Lazi",
       "price": "150000 $",
       "image": "src/assets/images/Lazi.png",
-      "inventory": 3,
+      "inventory": 37,
       "discount": ""
     },
     {
