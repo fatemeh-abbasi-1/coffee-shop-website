@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import Text from "../../atoms/Text/Text";
 import { NavLinkProps } from "./types";
 
@@ -9,12 +11,12 @@ const NavLink: React.FC<NavLinkProps> = ({ variant }) => {
       <ul className={`flex flex-row gap-14 font-bold ${sizeStyle}`}>
         <Text>
           <li>
-            <a href="#">ABOUT US</a>
+            <Link to={"/about-us"}>ABOUT US</Link>
           </li>
         </Text>
         <Text>
           <li>
-            <a href="#">CONTACT US</a>
+            <Link to={"/contact-us"}>CONTACT US</Link>
           </li>
         </Text>
       </ul>

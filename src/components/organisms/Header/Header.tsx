@@ -8,6 +8,7 @@ import Hr from "../../atoms/Hr/Hr";
 import Logo from "../../atoms/Logo/Logo";
 
 import ShoppingCard from "../../../assets/icons/ShoppingCardSvg";
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   const selectedProducts = useSelector(
@@ -27,7 +28,9 @@ const Header: React.FC = () => {
             <span className="w-11 h-8 text-white">
               <ShoppingCard />
             </span>
-            <Button variant="large-secondary">Sign Up</Button>
+            <Button variant="large-secondary">
+              <Link to={"/register"}>Sign Up</Link>
+            </Button>
           </div>
         </header>
         <Hr />
