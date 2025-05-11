@@ -1,6 +1,6 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../../firebase/firebase";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -9,7 +9,6 @@ import InputWithLable from "../../molecules/InputWithLabel/InputWithLabel";
 import Button from "../../atoms/Button/Button";
 import Title from "../../atoms/Title/Title";
 import Text from "../../atoms/Text/Text";
-// import { saveInfoToLocal } from "./index";
 
 import Americano from "../../../assets/images/Americano.png";
 
@@ -17,28 +16,20 @@ const Register = () => {
   const navigate = useNavigate();
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // const nameRegex = /^[\u0600-\u06FFa-zA-Z]{5,}$/;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
-  //const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  // const [validName, setValidName] = useState(false);
   const [validEmail, setValidEmail] = useState(false);
   const [validPassword, setValidPassword] = useState(false);
 
-  //const [nameFocus, setNameFocus] = useState(false);
   const [emailFocus, setEmailFocus] = useState(false);
   const [passwordFocus, setPasswordFocus] = useState(false);
 
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
-
-  // useEffect(() => {
-  //   setValidName(nameRegex.test(name));
-  // }, [name]);
 
   useEffect(() => {
     setValidEmail(emailRegex.test(email));
@@ -64,11 +55,13 @@ const Register = () => {
       setError("");
       setEmail("");
       setPassword("");
-      navigate('/home')
+      navigate("/home");
     } catch (error: unknown) {
       if (error instanceof Error) {
         setError(error.message);
         setSuccess(false);
+        setEmail("");
+        setPassword("");
       } else {
         setError("An error has occurred.");
       }
@@ -77,29 +70,10 @@ const Register = () => {
 
   return (
     <Section>
-      <div className="flex justify-center pt-32">
+      <div className="flex justify-center pt-44">
         <div className="flex flex-col gap-6 w-1/3 bg-dark_brown2 py-10 px-10 items-center border border-mocha">
           <Title size="medium">REGISTER</Title>
-          {/* <div className="flex flex-col gap-3">
-            <InputWithLable
-              className={
-                error && !nameFocus && !validName && "border-4 border-red-600"
-              }
-              type="text"
-              id="name"
-              labelText="Name"
-              ref={inputRef}
-              value={name}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                setName(e.target.value)
-              }
-              onFocus={() => setNameFocus(true)}
-              onBlur={() => setNameFocus(false)}
-            />
-            {!validName && nameFocus && name && (
-              <Text variant="smaller">Must be at least 5 characters.</Text>
-            )}
-          </div> */}
+
           <div className="flex flex-col gap-3">
             <InputWithLable
               className={
@@ -147,10 +121,13 @@ const Register = () => {
           <Button variant="submit" className="mt-4" onClick={handleClick}>
             <Text variant="small">Create Account</Text>
           </Button>
+          {error && <Text variant="small">{error}</Text>}
           <div className="flex justify-between gap-10">
             <div>
               <Text variant="small">Already have an account ? </Text>
-              <Text variant="small">Login</Text>
+              <Text variant="small">
+                <Link to={"/login"}>Login</Link>
+              </Text>
             </div>
             <img src={Americano} alt="coffee cup" className="w-16" />
           </div>
