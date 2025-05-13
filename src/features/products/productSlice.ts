@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+
 import axios from "axios";
 
 export interface Product {
@@ -28,6 +29,7 @@ const initialState: ProductsState = {
   totalCount: 0,
 };
 
+// fetch all products
 export const fetchProducts = createAsyncThunk<
   { data: Product[]; totalCount: number },
   number
@@ -46,31 +48,43 @@ export const fetchProducts = createAsyncThunk<
       Accept: "application/json",
     },
   });
-  console.log(totalCount.data.length);
+
   return { data: response.data, totalCount: totalCount.data.length };
 });
 
+// add to card
 export const addProductInCard = createAsyncThunk(
   "products/addProductInCard",
-  async (productId: number) => {
+  async (productId: number, thunkAPI) => {
     const getRes = await axios.get(
       `http://localhost:3000/products/${productId}`
     );
-    console.log(getRes.data);
 
     const currentProduct = getRes.data;
     const updatedInventory = currentProduct.inventory - 1;
-    const patchRes = await axios.patch(
-      `http://localhost:3000/products/${productId}`,
-      {
-        inventory: updatedInventory,
-      }
-    );
 
-    return { selectedProduct: getRes.data, editedData: patchRes.data };
+    await axios.patch(`http://localhost:3000/products/${productId}`, {
+      inventory: updatedInventory,
+    });
+
+    await axios.post(`http://localhost:3000/selectedProducts`, getRes.data);
+
+    thunkAPI.dispatch(fetchSelectedProducts());
+
+    return { selectedProduct: getRes.data };
   }
 );
 
+export const fetchSelectedProducts = createAsyncThunk(
+  "fetchSelectedProducts",
+  async () => {
+    const getRes = await axios.get(`http://localhost:3000/selectedProducts`);
+    console.log(getRes.data);
+    return getRes.data;
+  }
+);
+
+//romove from card
 export const removeProductFromCard = createAsyncThunk(
   "products/removeProductFromCard",
   async (productId: number) => {
@@ -84,6 +98,8 @@ export const removeProductFromCard = createAsyncThunk(
     await axios.patch(`http://localhost:3000/products/${productId}`, {
       inventory: updatedInventory,
     });
+
+    await axios.delete(`http://localhost:3000/selectedProducts/${productId}`);
 
     return getRes.data;
   }
@@ -101,7 +117,7 @@ export const productsSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    //fetch
+    //fetch all products
     builder
       .addCase(fetchProducts.pending, (state) => {
         state.fetchStatus = "loading";
@@ -124,15 +140,11 @@ export const productsSlice = createSlice({
         state.error = action.error.message || "Error... ";
       });
 
-    // add to card
-    builder.addCase(
-      addProductInCard.fulfilled,
-      (state, action: PayloadAction<{ selectedProduct: Product }>) => {
-        const { selectedProduct } = action.payload;
-        state.selectedProducts = [...state.selectedProducts, selectedProduct];
-        console.log(state.selectedProducts);
-      }
-    );
+    // get selected products
+    builder.addCase(fetchSelectedProducts.fulfilled, (state, action) => {
+      state.selectedProducts = action.payload;
+      console.log(state.selectedProducts);
+    });
 
     //remove from card
     builder.addCase(removeProductFromCard.fulfilled, (state, action) => {

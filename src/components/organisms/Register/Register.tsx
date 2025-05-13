@@ -55,7 +55,9 @@ const Register = () => {
       setError("");
       setEmail("");
       setPassword("");
-      navigate("/home");
+      if (success) {
+        navigate("/home");
+      }
     } catch (error: unknown) {
       if (error instanceof Error) {
         setError(error.message);

@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+
 import { RootState } from "../../../app/store";
 
 import Section from "../../atoms/Section/Section";
@@ -26,7 +27,9 @@ const Header: React.FC = () => {
               {selectedProducts.length}
             </p>
             <span className="w-11 h-8 text-white">
-              <ShoppingCard />
+              <Link to={"/card"}>
+                <ShoppingCard />
+              </Link>
             </span>
             <Button variant="large-secondary">
               <Link to={"/register"}>Sign Up</Link>

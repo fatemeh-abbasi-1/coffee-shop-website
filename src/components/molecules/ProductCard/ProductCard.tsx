@@ -13,7 +13,6 @@ const ProductCard: React.FC<ProductsCardProps> = ({ product }) => {
   const selectedProducts = useSelector(
     (state: RootState) => state.products.selectedProducts
   );
- 
 
   const dispatch = useDispatch<AppDispatch>();
 
@@ -41,7 +40,7 @@ const ProductCard: React.FC<ProductsCardProps> = ({ product }) => {
       </span>
       <img
         src={product.image}
-        alt=""
+        alt="Product-Image"
         className="w-[90px] h-[85px] absolute -left-12"
       />
       <div className="flex flex-row justify-between">

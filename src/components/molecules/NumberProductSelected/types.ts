@@ -1,5 +1,5 @@
 export interface NumberProductSelectedProps {
   productId: number;
-  isHidden: boolean;
-  setIsHidden: React.Dispatch<React.SetStateAction<boolean>>;
+  isHidden?: boolean;
+  setIsHidden?: React.Dispatch<React.SetStateAction<boolean>>;
 }

@@ -19,10 +19,10 @@ const NumberProductSelected: React.FC<NumberProductSelectedProps> = ({
     (state: RootState) => state.products.selectedProducts
   );
 
-  const plusClick = () => {
+  const addToCard = () => {
     dispatch(addProductInCard(productId));
   };
-  const trashClick = () => {
+  const removeFromCard = () => {
     dispatch(removeProductFromCard(productId));
   };
 
@@ -30,13 +30,13 @@ const NumberProductSelected: React.FC<NumberProductSelectedProps> = ({
     <div className="flex gap-4">
       <span
         className="text-white mt-1 text-2xl cursor-pointer"
-        onClick={trashClick}
+        onClick={removeFromCard}
       >
         <Trash />
       </span>
       <Text>{selectedProducts.filter((p) => p.id === productId).length}</Text>
 
-      <span className="text-white mt-1 cursor-pointer" onClick={plusClick}>
+      <span className="text-white mt-1 cursor-pointer" onClick={addToCard}>
         <Plus />
       </span>
     </div>
