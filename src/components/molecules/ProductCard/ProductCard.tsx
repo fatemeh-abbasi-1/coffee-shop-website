@@ -46,7 +46,13 @@ const ProductCard: React.FC<ProductsCardProps> = ({ product }) => {
       <div className="flex flex-row justify-between">
         <div className="flex flex-col pt-3 gap-2">
           <Text variant="small">{product.name}</Text>
-          <Text variant="small">{product.price}</Text>
+          <div className="flex gap-3">
+            <Text variant="small">
+              {product.price}
+              <span className="text-white ml-2 text-sm">Toman</span>
+            </Text>
+            {/* <Text variant="small">{Number(product.price) * count} Tom</Text> */}
+          </div>
         </div>
 
         <span className="p-4 border-l-2 mt-3 border-mocha h-20">
