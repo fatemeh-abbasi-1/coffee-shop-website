@@ -23,25 +23,34 @@ const ShoppingCardSection = () => {
     0
   );
 
+  console.log(uniqueProducts.length);
+
   return (
     <Section>
       <div className="flex flex-col items-center pt-10 pb-24 gap-16">
         <Title>SOPPING CARD</Title>
+        {uniqueProducts.length === 0 && (
+          <Text>The shopping cart is empty.</Text>
+        )}
         <div className="flex gap-28  flex-wrap justify-center">
           {uniqueProducts.map((p: Product) => {
             return <ProductCard key={p.id} product={p} />;
           })}
         </div>
-        <Text>
-          Your purchase total : {total}
-          <span className="text-white ml-3"> Toman</span>
-        </Text>
-        <div className="flex gap-10">
-          <Button variant="large-secondary">
-            <Link to={"/home"}>Home</Link>
-          </Button>
-          <Button>Payment</Button>
-        </div>
+        {uniqueProducts.length < 0 && (
+          <>
+            <Text>
+              Your purchase total : {total}
+              <span className="text-white ml-3"> Toman</span>
+            </Text>
+            <div className="flex gap-10">
+              <Button variant="large-secondary">
+                <Link to={"/home"}>Home</Link>
+              </Button>
+              <Button>Payment</Button>
+            </div>
+          </>
+        )}
       </div>
     </Section>
   );
