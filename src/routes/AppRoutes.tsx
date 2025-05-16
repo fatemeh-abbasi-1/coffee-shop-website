@@ -9,6 +9,7 @@ import Register from "../components/organisms/Register/Register";
 import Login from "../components/organisms/Login/Login";
 import ShoppingCardPage from "../components/pages/ShoppingCardPage";
 import AboutUsPage from "../components/pages/AboutUsPage";
+import ContactUsPage from "../components/pages/ContactUsPage";
 
 const AppRoutes = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -23,7 +24,8 @@ const AppRoutes = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
       <Route path="/card" element={<ShoppingCardPage />} />
-      <Route path="/about" element={<AboutUsPage />} />
+      <Route path="/about-us" element={<AboutUsPage />} />
+      <Route path="/contact-us" element={<ContactUsPage />} />
     </Routes>
   );
 };

@@ -27,7 +27,7 @@ const Footer = () => {
           <SocialLinks />
         </div>
       </div>
-      <Hr />
+      {/* <Hr /> */}
       <div className="flex py-5 justify-between">
         {/* <Logo /> */}
         <Text>Logo</Text>

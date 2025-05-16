@@ -47,6 +47,7 @@ const Login = () => {
         <div className="flex flex-col gap-6 w-1/3 bg-dark_brown2 py-10 px-10 items-center border border-mocha">
           <Title size="medium">LOGIN</Title>
           <InputWithLable
+            variant="primary"
             type="text"
             labelText="Email Address"
             id="login email"
@@ -58,6 +59,7 @@ const Login = () => {
           />
 
           <InputWithLable
+            variant="primary"
             type="password"
             labelText="Password"
             id="login password"

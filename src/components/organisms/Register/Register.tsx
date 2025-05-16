@@ -78,6 +78,7 @@ const Register = () => {
 
           <div className="flex flex-col gap-3">
             <InputWithLable
+              variant="primary"
               className={
                 error && !emailFocus && !validEmail && "border-4 border-red-600"
               }
@@ -98,6 +99,7 @@ const Register = () => {
 
           <div className="flex flex-col gap-3">
             <InputWithLable
+              variant="primary"
               className={
                 error &&
                 !passwordFocus &&

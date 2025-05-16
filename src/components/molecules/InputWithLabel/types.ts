@@ -1,4 +1,5 @@
-export type InputWithLableProps = {
+export interface InputWithLableProps {
+  variant: "primary" | "secondary";
   type: "text" | "password";
   labelText: string;
   id: string;
@@ -7,4 +8,4 @@ export type InputWithLableProps = {
   onBlur?: () => void;
   onFocus?: () => void;
   className?: React.ReactNode;
-};
+}

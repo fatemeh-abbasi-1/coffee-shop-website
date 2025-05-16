@@ -21,4 +21,4 @@ const AboutUsContent = () => {
 };
 
 export default AboutUsContent;
-// bg-dark_brown2 border border-mocha
+

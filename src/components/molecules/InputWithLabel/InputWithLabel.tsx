@@ -2,20 +2,35 @@ import React from "react";
 
 import Input from "../../atoms/Input/Input";
 import Text from "../../atoms/Text/Text";
+import Label from "../../atoms/Label/Label";
 
 import { InputWithLableProps } from "./types";
 
 const InputWithLable = React.forwardRef<HTMLInputElement, InputWithLableProps>(
   (
-    { type, labelText, id, onChange, value, onBlur, onFocus, className },
+    {
+      type,
+      labelText,
+      id,
+      onChange,
+      value,
+      onBlur,
+      onFocus,
+      className,
+      variant,
+    },
     ref
   ) => {
+    const style =
+      variant === "primary" ? "flex-col gap-1" : "flex justify-between";
+
     return (
-      <div className="flex flex-col gap-1">
-        <label htmlFor={id}>
+      <div className={`flex ${style}`}>
+        <Label htmlFor={id}>
           <Text variant="small">{labelText}</Text>
-        </label>
+        </Label>
         <Input
+          variant={variant}
           className={className}
           type={type}
           ref={ref}
