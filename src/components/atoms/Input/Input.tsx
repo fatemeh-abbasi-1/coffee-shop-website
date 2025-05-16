@@ -4,9 +4,9 @@ import React from "react";
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ type, onChange, value, onBlur, onFocus, className, variant }, ref) => {
     const baseStyle =
-      "h-12 bg-mocha rounded-lg text-white p-3 font-bold text-lg";
+      "h-14 bg-mocha rounded-lg text-white p-3 font-bold text-lg";
 
-    const customStyle = variant === "primary" ? "w-96" : "w-[900px] h-16";
+    const customStyle = variant === "primary" ? "w-96" : "w-[500px]";
 
     return (
       <input

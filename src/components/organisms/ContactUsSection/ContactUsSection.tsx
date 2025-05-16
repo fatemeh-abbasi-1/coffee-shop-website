@@ -1,10 +1,14 @@
 import { useState } from "react";
 
 import Section from "../../atoms/Section/Section";
-import SocialLinks from "../../molecules/SocialLinks/SocialLinks";
 import Title from "../../atoms/Title/Title";
 import InputWithLable from "../../molecules/InputWithLabel/InputWithLabel";
 import Button from "../../atoms/Button/Button";
+import Label from "../../atoms/Label/Label";
+import Text from "../../atoms/Text/Text";
+import Textarea from "../../atoms/Textarea/Textarea";
+
+
 
 const ContactUsSection = () => {
   const [email, setEmail] = useState("");
@@ -16,22 +20,12 @@ const ContactUsSection = () => {
     setName("");
     setMassage("");
   };
-  
+
   return (
     <Section>
       <div className="flex justify-between pt-28">
-        <div className="flex flex-col gap-16 w-[1000px] ">
+        <div className="flex flex-col gap-14 w-[700px] ">
           <Title size="medium">Contact Us</Title>
-          <InputWithLable
-            variant="secondary"
-            type={"text"}
-            labelText={"Email"}
-            id="Contact-Email"
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-            value={email}
-          />
           <InputWithLable
             type={"text"}
             labelText={"Name"}
@@ -43,19 +37,28 @@ const ContactUsSection = () => {
             value={name}
           />
           <InputWithLable
-            type={"text"}
-            labelText={"Message"}
-            id="Contact-Message"
             variant="secondary"
+            type={"text"}
+            labelText={"Email"}
+            id="Contact-Email"
             onChange={(e) => {
-              setMassage(e.target.value);
+              setEmail(e.target.value);
             }}
-            value={massage}
+            value={email}
           />
+          <div className="flex justify-between">
+            <Label htmlFor="Contact-Message">
+              <Text>Message</Text>
+            </Label>
+            <Textarea
+              value={massage}
+              id="Contact-Message"
+              onChange={(e) => {
+                setMassage(e.target.value);
+              }}
+            />
+          </div>
           <Button onClick={sendMessage}>Send</Button>
-        </div>
-        <div className="mt-28 mb-28 border border-mocha p-10">
-          <SocialLinks className="flex-col" />
         </div>
       </div>
     </Section>
@@ -63,3 +66,7 @@ const ContactUsSection = () => {
 };
 
 export default ContactUsSection;
+//  onChange={(e) => {
+//               setMassage(e.target.value);
+//             }}
+//             value={massage}
