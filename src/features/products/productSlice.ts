@@ -43,6 +43,8 @@ export const fetchProducts = createAsyncThunk<
       },
     }
   );
+  console.log(response.data);
+
   const totalCount = await axios.get(`http://localhost:3000/products`, {
     headers: {
       Accept: "application/json",

@@ -2,7 +2,10 @@ import { InputProps } from "./types";
 import React from "react";
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ type, onChange, value, onBlur, onFocus, className, variant }, ref) => {
+  (
+    { type, onChange, value, placeholder, onBlur, onFocus, className, variant },
+    ref
+  ) => {
     const baseStyle =
       "h-14 bg-mocha rounded-lg text-white p-3 font-bold text-lg";
 
@@ -17,6 +20,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         className={`${customStyle} ${baseStyle} ${className}`}
         onBlur={onBlur}
         onFocus={onFocus}
+        placeholder={placeholder}
       />
     );
   }

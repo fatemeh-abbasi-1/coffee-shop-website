@@ -13,6 +13,7 @@ const InputWithLable = React.forwardRef<HTMLInputElement, InputWithLableProps>(
       labelText,
       id,
       onChange,
+      placeholder,
       value,
       onBlur,
       onFocus,
@@ -38,6 +39,7 @@ const InputWithLable = React.forwardRef<HTMLInputElement, InputWithLableProps>(
           value={value}
           onBlur={onBlur}
           onFocus={onFocus}
+          placeholder={placeholder}
         />
       </div>
     );

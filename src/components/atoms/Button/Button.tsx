@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({
 
   const sizeStyles =
     variant === "large-primary"
-      ? `w-40 h-14 bg-transparent ${baseStylesPrimary}`
+      ? `w-40 h-14 bg-transparent text-lg ${baseStylesPrimary}`
       : variant === "large-secondary"
       ? `w-40 h-14  text-lg ${baseStylesSecondary}`
       : variant === "small"

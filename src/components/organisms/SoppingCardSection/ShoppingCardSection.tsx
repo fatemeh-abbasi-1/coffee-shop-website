@@ -37,7 +37,7 @@ const ShoppingCardSection = () => {
             return <ProductCard key={p.id} product={p} />;
           })}
         </div>
-        {uniqueProducts.length < 0 && (
+        {uniqueProducts.length !== 0 && (
           <>
             <Text>
               Your purchase total : {total}

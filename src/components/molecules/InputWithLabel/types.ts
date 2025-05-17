@@ -3,8 +3,9 @@ export interface InputWithLableProps {
   type: "text" | "password";
   labelText: string;
   id: string;
+  placeholder?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  value?: string;
+  value?: string | number;
   onBlur?: () => void;
   onFocus?: () => void;
   className?: React.ReactNode;

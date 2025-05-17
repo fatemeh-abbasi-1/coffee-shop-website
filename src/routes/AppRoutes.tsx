@@ -10,6 +10,7 @@ import Login from "../components/organisms/Login/Login";
 import ShoppingCardPage from "../components/pages/ShoppingCardPage";
 import AboutUsPage from "../components/pages/AboutUsPage";
 import ContactUsPage from "../components/pages/ContactUsPage";
+import PayPage from "../components/pages/PayPage";
 
 const AppRoutes = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -26,6 +27,7 @@ const AppRoutes = () => {
       <Route path="/card" element={<ShoppingCardPage />} />
       <Route path="/about-us" element={<AboutUsPage />} />
       <Route path="/contact-us" element={<ContactUsPage />} />
+      <Route path="/pay" element={<PayPage />} />
     </Routes>
   );
 };

@@ -5,7 +5,7 @@
       "name": "Iced Latte",
       "price": "150000",
       "image": "src/assets/images/Late.png",
-      "inventory": 40,
+      "inventory": 38,
       "discount": "13 %"
     },
     {
@@ -85,7 +85,7 @@
       "name": "Green tea",
       "price": "150000",
       "image": "src/assets/images/Green_Tea.png",
-      "inventory": 97,
+      "inventory": 96,
       "discount": "10 %"
     },
     {
@@ -101,7 +101,7 @@
       "name": "Cinnamon Tea",
       "price": "150000",
       "image": "src/assets/images/Cinnamon_Tea.png",
-      "inventory": 87,
+      "inventory": 86,
       "discount": "10 %"
     },
     {
@@ -177,5 +177,38 @@
       "discount": "10 %"
     }
   ],
-  "selectedProducts": []
+  "selectedProducts": [
+    {
+      "id": "11",
+      "name": "Green tea",
+      "price": "150000",
+      "image": "src/assets/images/Green_Tea.png",
+      "inventory": 97,
+      "discount": "10 %"
+    },
+    {
+      "id": "13",
+      "name": "Cinnamon Tea",
+      "price": "150000",
+      "image": "src/assets/images/Cinnamon_Tea.png",
+      "inventory": 87,
+      "discount": "10 %"
+    },
+    {
+      "id": "1",
+      "name": "Iced Latte",
+      "price": "150000",
+      "image": "src/assets/images/Late.png",
+      "inventory": 40,
+      "discount": "13 %"
+    },
+    {
+      "id": "1",
+      "name": "Iced Latte",
+      "price": "150000",
+      "image": "src/assets/images/Late.png",
+      "inventory": 39,
+      "discount": "13 %"
+    }
+  ]
 }
