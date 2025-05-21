@@ -14,7 +14,7 @@ const Text: React.FC<TextProps> = ({
       ? "text-base md:text-2xl"
       : variant === "small"
       ? "text-sm md:text-xl"
-      : "text-sm bg-transparent rounded-full px-2";
+      : "text-sm bg-transparent rounded-full px-2 text-white";
 
   const combinedClass = `${baseStyles} ${sizeStyles} ${className}`;
 

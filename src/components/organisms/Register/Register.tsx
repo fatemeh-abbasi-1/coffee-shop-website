@@ -52,12 +52,12 @@ const Register = () => {
       );
       console.log(sendInfo.user);
       setSuccess(true);
-      setError("");
-      setEmail("");
-      setPassword("");
       if (success) {
         navigate("/home");
       }
+      setError("");
+      setEmail("");
+      setPassword("");
     } catch (error: unknown) {
       if (error instanceof Error) {
         setError(error.message);
@@ -125,7 +125,16 @@ const Register = () => {
           <Button variant="submit" className="mt-4" onClick={handleClick}>
             <Text variant="small">Create Account</Text>
           </Button>
-          {error && <Text variant="small">{error}</Text>}
+          {error && (
+            <Text variant="small" className="text-red-500">
+              {error}
+            </Text>
+          )}
+          {success && (
+            <Text variant="small" className="text-green-500">
+              Payment successful!
+            </Text>
+          )}
           <div className="flex justify-between gap-10">
             <div>
               <Text variant="small">Already have an account ? </Text>

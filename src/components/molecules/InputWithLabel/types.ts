@@ -9,4 +9,6 @@ export interface InputWithLableProps {
   onBlur?: () => void;
   onFocus?: () => void;
   className?: React.ReactNode;
+  error?: boolean;
+  errorText?: string;
 }

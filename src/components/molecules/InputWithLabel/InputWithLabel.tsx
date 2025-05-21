@@ -19,6 +19,8 @@ const InputWithLable = React.forwardRef<HTMLInputElement, InputWithLableProps>(
       onFocus,
       className,
       variant,
+      error = false,
+      errorText,
     },
     ref
   ) => {
@@ -41,6 +43,7 @@ const InputWithLable = React.forwardRef<HTMLInputElement, InputWithLableProps>(
           onFocus={onFocus}
           placeholder={placeholder}
         />
+        {error && <Text variant="smaller">{errorText}</Text>}
       </div>
     );
   }

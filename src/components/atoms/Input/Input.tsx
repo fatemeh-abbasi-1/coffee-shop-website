@@ -1,9 +1,20 @@
-import { InputProps } from "./types";
 import React from "react";
+import { InputProps } from "./types";
+
+
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
-    { type, onChange, value, placeholder, onBlur, onFocus, className, variant },
+    {
+      type,
+      onChange,
+      value,
+      placeholder,
+      onBlur,
+      onFocus,
+      className,
+      variant,
+    },
     ref
   ) => {
     const baseStyle =
@@ -21,7 +32,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         onBlur={onBlur}
         onFocus={onFocus}
         placeholder={placeholder}
+      
       />
+  
     );
   }
 );

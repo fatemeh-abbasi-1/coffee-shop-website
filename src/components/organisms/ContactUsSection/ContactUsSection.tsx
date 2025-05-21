@@ -7,8 +7,7 @@ import Button from "../../atoms/Button/Button";
 import Label from "../../atoms/Label/Label";
 import Text from "../../atoms/Text/Text";
 import Textarea from "../../atoms/Textarea/Textarea";
-
-
+import Image from "../../atoms/Image/Image";
 
 const ContactUsSection = () => {
   const [email, setEmail] = useState("");
@@ -60,13 +59,10 @@ const ContactUsSection = () => {
           </div>
           <Button onClick={sendMessage}>Send</Button>
         </div>
+        <Image src={"src/assets/images/person.png"} className="w-80 h-72"/>
       </div>
     </Section>
   );
 };
 
 export default ContactUsSection;
-//  onChange={(e) => {
-//               setMassage(e.target.value);
-//             }}
-//             value={massage}

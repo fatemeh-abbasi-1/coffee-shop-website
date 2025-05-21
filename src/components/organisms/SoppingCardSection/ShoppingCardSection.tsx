@@ -40,14 +40,16 @@ const ShoppingCardSection = () => {
         {uniqueProducts.length !== 0 && (
           <>
             <Text>
-              Your purchase total : {total}
+              Your Purchase Total : {total}
               <span className="text-white ml-3"> Toman</span>
             </Text>
             <div className="flex gap-10">
               <Button variant="large-secondary">
                 <Link to={"/home"}>Home</Link>
               </Button>
-              <Button>Payment</Button>
+              <Button>
+                <Link to={"/pay"}>Payment</Link>
+              </Button>
             </div>
           </>
         )}
