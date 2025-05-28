@@ -22,7 +22,7 @@ const ContactUsSection = () => {
 
   return (
     <Section>
-      <div className="flex justify-between pt-28">
+      <div className="flex gap-80 pt-28">
         <div className="flex flex-col gap-14 w-[700px] ">
           <Title size="medium">Contact Us</Title>
           <InputWithLable
@@ -59,7 +59,7 @@ const ContactUsSection = () => {
           </div>
           <Button onClick={sendMessage}>Send</Button>
         </div>
-        <Image src={"src/assets/images/person.png"} className="w-80 h-72"/>
+        <Image src={"src/assets/images/person.png"} className="w-[500px] h-[450px] mt-24" />
       </div>
     </Section>
   );

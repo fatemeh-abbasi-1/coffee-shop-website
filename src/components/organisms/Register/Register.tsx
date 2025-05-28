@@ -91,6 +91,7 @@ const Register = () => {
               }
               onBlur={() => setEmailFocus(false)}
               onFocus={() => setEmailFocus(true)}
+              ref={inputRef}
             />
             {!validEmail && emailFocus && email && (
               <Text variant="smaller">Enter your email address.</Text>
@@ -132,7 +133,7 @@ const Register = () => {
           )}
           {success && (
             <Text variant="small" className="text-green-500">
-              Payment successful!
+              Successful Registration!
             </Text>
           )}
           <div className="flex justify-between gap-10">
