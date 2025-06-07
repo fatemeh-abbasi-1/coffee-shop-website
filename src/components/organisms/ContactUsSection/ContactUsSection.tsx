@@ -7,7 +7,7 @@ import Button from "../../atoms/Button/Button";
 import Label from "../../atoms/Label/Label";
 import Text from "../../atoms/Text/Text";
 import Textarea from "../../atoms/Textarea/Textarea";
-import Image from "../../atoms/Image/Image";
+import DecoratedImage from "../../molecules/DecoratedImage/DecoratedImage";
 
 const ContactUsSection = () => {
   const [email, setEmail] = useState("");
@@ -22,7 +22,7 @@ const ContactUsSection = () => {
 
   return (
     <Section>
-      <div className="flex gap-80 pt-28">
+      <div className="flex gap-96 pt-28">
         <div className="flex flex-col gap-14 w-[700px] ">
           <Title size="medium">Contact Us</Title>
           <InputWithLable
@@ -59,7 +59,8 @@ const ContactUsSection = () => {
           </div>
           <Button onClick={sendMessage}>Send</Button>
         </div>
-        <Image src={"src/assets/images/person.png"} className="w-[500px] h-[450px] mt-24" />
+        <DecoratedImage src={"src/assets/images/person.png"} />
+        {/* <Image src={"src/assets/images/person.png"} className="w-[500px] h-[450px] mt-24" /> */}
       </div>
     </Section>
   );
