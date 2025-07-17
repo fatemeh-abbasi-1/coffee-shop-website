@@ -59,3 +59,7 @@ const ShoppingCardSection = () => {
 };
 
 export default ShoppingCardSection;
+
+
+
+

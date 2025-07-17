@@ -80,7 +80,10 @@ const Register = () => {
             <InputWithLable
               variant="primary"
               className={
-                error && !emailFocus && !validEmail && "border-4 border-red-600"
+                error &&
+                !emailFocus &&
+                !validEmail &&
+                "shadow-red-600 shadow-md border-2 border-red-600"
               }
               type="text"
               id="register email"
@@ -105,7 +108,7 @@ const Register = () => {
                 error &&
                 !passwordFocus &&
                 !validPassword &&
-                "border-4 border-red-600"
+                "shadow-red-600 shadow-md border-2 border-red-600"
               }
               type="password"
               id="password"
@@ -127,7 +130,10 @@ const Register = () => {
             <Text variant="small">Create Account</Text>
           </Button>
           {error && (
-            <Text variant="small" className="text-red-500">
+            <Text
+              variant="small"
+              className="text-red-500 bg-creamy_white p-1 rounded-lg"
+            >
               {error}
             </Text>
           )}
@@ -136,6 +142,7 @@ const Register = () => {
               Successful Registration!
             </Text>
           )}
+          {success && <Link to="/home"></Link>}
           <div className="flex justify-between gap-10">
             <div>
               <Text variant="small">Already have an account ? </Text>

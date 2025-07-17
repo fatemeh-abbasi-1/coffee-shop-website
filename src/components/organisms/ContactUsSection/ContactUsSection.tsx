@@ -4,10 +4,7 @@ import Section from "../../atoms/Section/Section";
 import Title from "../../atoms/Title/Title";
 import InputWithLable from "../../molecules/InputWithLabel/InputWithLabel";
 import Button from "../../atoms/Button/Button";
-import Label from "../../atoms/Label/Label";
-import Text from "../../atoms/Text/Text";
-import Textarea from "../../atoms/Textarea/Textarea";
-import DecoratedImage from "../../molecules/DecoratedImage/DecoratedImage";
+
 
 const ContactUsSection = () => {
   const [email, setEmail] = useState("");
@@ -22,45 +19,44 @@ const ContactUsSection = () => {
 
   return (
     <Section>
-      <div className="flex gap-96 pt-28">
-        <div className="flex flex-col gap-14 w-[700px] ">
+      <div className="flex gap-96 pt-32 justify-center">
+        <div className="flex flex-col gap-20 w-[1000px] ">
           <Title size="medium">Contact Us</Title>
-          <InputWithLable
-            type={"text"}
-            labelText={"Name"}
-            id="Contact-Name"
-            variant="secondary"
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
-            value={name}
-          />
-          <InputWithLable
-            variant="secondary"
-            type={"text"}
-            labelText={"Email"}
-            id="Contact-Email"
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-            value={email}
-          />
-          <div className="flex justify-between">
-            <Label htmlFor="Contact-Message">
-              <Text>Message</Text>
-            </Label>
-            <Textarea
-              value={massage}
+          <div className="flex flex-col gap-12">
+            <InputWithLable
+              type={"text"}
+              labelText={"Name"}
+              id="Contact-Name"
+              variant="secondary"
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
+              value={name}
+            />
+            <InputWithLable
+              variant="secondary"
+              type={"text"}
+              labelText={"Email"}
+              id="Contact-Email"
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              value={email}
+            />
+
+            <InputWithLable
+              variant="secondary"
+              type={"text"}
+              labelText={"Message"}
               id="Contact-Message"
               onChange={(e) => {
                 setMassage(e.target.value);
               }}
+              value={massage}
             />
           </div>
           <Button onClick={sendMessage}>Send</Button>
         </div>
-        <DecoratedImage src={"src/assets/images/person.png"} />
-        {/* <Image src={"src/assets/images/person.png"} className="w-[500px] h-[450px] mt-24" /> */}
       </div>
     </Section>
   );

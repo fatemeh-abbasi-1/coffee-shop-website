@@ -6,7 +6,7 @@ module.exports = {
       colors: {
         mocha: "#754c36",
         dark_brown1: "#412405",
-        dark_brown2: "#30190A",
+        dark_brown2: "#432410",
         creamy_white: "#f6cc95",
       },
       backgroundImage: {
@@ -19,3 +19,5 @@ module.exports = {
   },
   plugins: [],
 };
+// dark_brown2: "#30190A",
+//  dark_brown2: "#381e0d",

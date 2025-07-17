@@ -29,8 +29,8 @@ const InputWithLable = React.forwardRef<HTMLInputElement, InputWithLableProps>(
 
     return (
       <div className={`flex ${style}`}>
-        <Label htmlFor={id}>
-          <Text variant="small">{labelText}</Text>
+        <Label htmlFor={id} className={variant !== "primary" ? "mt-4" : ""}>
+          <Text variant="medium">{labelText}</Text>
         </Label>
         <Input
           variant={variant}
