@@ -32,7 +32,7 @@ const Header: React.FC = () => {
               </Link>
             </span>
             <Button variant="large-secondary">
-              <Link to={"/register"}>Sign Up</Link>
+              <Link to={"/login"}>Login</Link>
             </Button>
           </div>
         </header>

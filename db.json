@@ -37,7 +37,7 @@
       "name": "Affogato",
       "price": "150000",
       "image": "src/assets/images/Affogato.png",
-      "inventory": 47,
+      "inventory": 49,
       "discount": "10 %"
     },
     {
@@ -61,7 +61,7 @@
       "name": "Turkish Coffee",
       "price": "150000",
       "image": "src/assets/images/TraditTurkish-Coffee.png",
-      "inventory": 7,
+      "inventory": 6,
       "discount": "10 %"
     },
     {
@@ -109,7 +109,7 @@
       "name": "Americano",
       "price": "150000",
       "image": "src/assets/images/Americano.png",
-      "inventory": 23,
+      "inventory": 22,
       "discount": "10 %"
     },
     {
@@ -133,7 +133,7 @@
       "name": "Hot chocolate",
       "price": "150000",
       "image": "src/assets/images/Hot-Chocolate.png",
-      "inventory": 22,
+      "inventory": 21,
       "discount": "10 %"
     },
     {
@@ -187,19 +187,27 @@
       "discount": "10 %"
     },
     {
-      "id": "5",
-      "name": "Affogato",
+      "id": "8",
+      "name": "Turkish Coffee",
       "price": "150000",
-      "image": "src/assets/images/Affogato.png",
-      "inventory": 49,
+      "image": "src/assets/images/TraditTurkish-Coffee.png",
+      "inventory": 7,
       "discount": "10 %"
     },
     {
-      "id": "5",
-      "name": "Affogato",
+      "id": "17",
+      "name": "Hot chocolate",
       "price": "150000",
-      "image": "src/assets/images/Affogato.png",
-      "inventory": 48,
+      "image": "src/assets/images/Hot-Chocolate.png",
+      "inventory": 22,
+      "discount": "10 %"
+    },
+    {
+      "id": "14",
+      "name": "Americano",
+      "price": "150000",
+      "image": "src/assets/images/Americano.png",
+      "inventory": 23,
       "discount": "10 %"
     }
   ]

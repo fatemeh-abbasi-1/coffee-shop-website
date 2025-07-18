@@ -1,27 +1,34 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../app/store";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "../../../app/store";
+import { changeModalState } from "../../../features/products/productSlice";
 
 import Section from "../../atoms/Section/Section";
-import Title from "../../atoms/Title/Title";
 import InputWithLable from "../../molecules/InputWithLabel/InputWithLabel";
 import Button from "../../atoms/Button/Button";
 
-
 const ContactUsSection = () => {
+  const dispatch = useDispatch<AppDispatch>();
+  // const openModal = useSelector((state: RootState) => state.products.cha);
+
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
-  const [massage, setMassage] = useState("");
+  const [message, setMessage] = useState("");
 
   const sendMessage = () => {
     setEmail("");
     setName("");
-    setMassage("");
+    setMessage("");
+    dispatch(changeModalState());
   };
 
   return (
     <Section>
-      <div className="flex gap-96 pt-32 justify-center">
+      <div className="flex gap-96 pt-52 justify-center">
         <div className="flex flex-col gap-20 w-[1000px] ">
-          <Title size="medium">Contact Us</Title>
+          {/* <Title size="medium">Contact Us</Title> */}
           <div className="flex flex-col gap-12">
             <InputWithLable
               type={"text"}
@@ -50,9 +57,9 @@ const ContactUsSection = () => {
               labelText={"Message"}
               id="Contact-Message"
               onChange={(e) => {
-                setMassage(e.target.value);
+                setMessage(e.target.value);
               }}
-              value={massage}
+              value={message}
             />
           </div>
           <Button onClick={sendMessage}>Send</Button>

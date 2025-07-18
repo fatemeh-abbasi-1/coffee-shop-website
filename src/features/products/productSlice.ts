@@ -18,6 +18,7 @@ export interface ProductsState {
   error: string | null;
   page: number;
   totalCount: number;
+  openModal: boolean;
 }
 
 const initialState: ProductsState = {
@@ -27,6 +28,7 @@ const initialState: ProductsState = {
   error: null,
   page: 1,
   totalCount: 0,
+  openModal: false,
 };
 
 // fetch all products
@@ -117,6 +119,9 @@ export const productsSlice = createSlice({
     decrementPage: (state) => {
       state.page -= 1;
     },
+    changeModalState: (state) => {
+      state.openModal = true;
+    },
   },
   extraReducers: (builder) => {
     //fetch all products
@@ -163,5 +168,6 @@ export const productsSlice = createSlice({
   },
 });
 
-export const { incrementPage, decrementPage } = productsSlice.actions;
+export const { incrementPage, decrementPage, changeModalState } =
+  productsSlice.actions;
 export default productsSlice.reducer;
