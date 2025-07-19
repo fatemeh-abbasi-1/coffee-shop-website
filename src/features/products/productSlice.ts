@@ -18,7 +18,7 @@ export interface ProductsState {
   error: string | null;
   page: number;
   totalCount: number;
-  openModal: boolean;
+  modalState: boolean;
 }
 
 const initialState: ProductsState = {
@@ -28,7 +28,7 @@ const initialState: ProductsState = {
   error: null,
   page: 1,
   totalCount: 0,
-  openModal: false,
+  modalState: false,
 };
 
 // fetch all products
@@ -120,7 +120,7 @@ export const productsSlice = createSlice({
       state.page -= 1;
     },
     changeModalState: (state) => {
-      state.openModal = true;
+      state.modalState = !state.modalState;
     },
   },
   extraReducers: (builder) => {

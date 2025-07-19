@@ -1,7 +1,8 @@
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "../../../app/store";
+import { changeModalState } from "../../../features/products/productSlice";
 
 import { useEffect, useRef, useState } from "react";
-
-
 
 import Image from "../../atoms/Image/Image";
 import InputWithLable from "../InputWithLabel/InputWithLabel";
@@ -9,6 +10,8 @@ import Button from "../../atoms/Button/Button";
 import Text from "../../atoms/Text/Text";
 
 const CardPaymentForm = () => {
+  const dispatch = useDispatch<AppDispatch>();
+
   const inputRef = useRef<HTMLInputElement>(null);
 
   const [cardNumber, setCardNumber] = useState("");
@@ -52,10 +55,10 @@ const CardPaymentForm = () => {
     setError("");
     setSuccess(true);
 
-    
     setCardNumber("");
     setSecondPassword("");
     setCvv("");
+    dispatch(changeModalState());
   };
 
   return (
@@ -131,11 +134,7 @@ const CardPaymentForm = () => {
           {error}
         </Text>
       )}
-      {success && (
-        <Text variant="small" className="text-green-500">
-          Payment successful!
-        </Text>
-      )}
+    
     </div>
   );
 };

@@ -21,7 +21,7 @@
       "name": "Ice Cream",
       "price": "150000",
       "image": "src/assets/images/Ice_Cream.png",
-      "inventory": 86,
+      "inventory": 83,
       "discount": ""
     },
     {
@@ -209,6 +209,30 @@
       "image": "src/assets/images/Americano.png",
       "inventory": 23,
       "discount": "10 %"
+    },
+    {
+      "id": "3",
+      "name": "Ice Cream",
+      "price": "150000",
+      "image": "src/assets/images/Ice_Cream.png",
+      "inventory": 86,
+      "discount": ""
+    },
+    {
+      "id": "3",
+      "name": "Ice Cream",
+      "price": "150000",
+      "image": "src/assets/images/Ice_Cream.png",
+      "inventory": 85,
+      "discount": ""
+    },
+    {
+      "id": "3",
+      "name": "Ice Cream",
+      "price": "150000",
+      "image": "src/assets/images/Ice_Cream.png",
+      "inventory": 84,
+      "discount": ""
     }
   ]
 }

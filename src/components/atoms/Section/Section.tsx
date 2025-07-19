@@ -11,7 +11,7 @@ const Section: React.FC<SectionProps> = ({
         backgroundColor ? backgroundColor : "bg-background-main-secondary"
       } ${
         height ? `${height}` : "min-h-[100svh]"
-      } w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32`}
+      } w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 z-0`}
     >
       {children}
     </section>

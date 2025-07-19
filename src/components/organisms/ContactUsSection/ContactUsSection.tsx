@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
-import { RootState } from "../../../app/store";
+
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../../app/store";
 import { changeModalState } from "../../../features/products/productSlice";
@@ -11,7 +10,6 @@ import Button from "../../atoms/Button/Button";
 
 const ContactUsSection = () => {
   const dispatch = useDispatch<AppDispatch>();
-  // const openModal = useSelector((state: RootState) => state.products.cha);
 
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -26,9 +24,8 @@ const ContactUsSection = () => {
 
   return (
     <Section>
-      <div className="flex gap-96 pt-52 justify-center">
+      <div className="flex gap-96 pt-52 justify-center ">
         <div className="flex flex-col gap-20 w-[1000px] ">
-          {/* <Title size="medium">Contact Us</Title> */}
           <div className="flex flex-col gap-12">
             <InputWithLable
               type={"text"}
