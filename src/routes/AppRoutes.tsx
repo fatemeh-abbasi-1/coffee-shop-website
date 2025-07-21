@@ -12,6 +12,8 @@ import AboutUsPage from "../components/pages/AboutUsPage";
 import ContactUsPage from "../components/pages/ContactUsPage";
 import PayPage from "../components/pages/PayPage";
 
+import RootRedirect from "./RootRedirect";
+
 const AppRoutes = () => {
   const dispatch = useDispatch<AppDispatch>();
 
@@ -28,6 +30,8 @@ const AppRoutes = () => {
       <Route path="/about-us" element={<AboutUsPage />} />
       <Route path="/contact-us" element={<ContactUsPage />} />
       <Route path="/pay" element={<PayPage />} />
+
+      <Route path="/" element={<RootRedirect />} />
     </Routes>
   );
 };

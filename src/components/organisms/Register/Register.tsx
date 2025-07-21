@@ -52,9 +52,7 @@ const Register = () => {
       );
       console.log(sendInfo.user);
       setSuccess(true);
-      if (success) {
-        navigate("/home");
-      }
+      navigate("/home");
       setError("");
       setEmail("");
       setPassword("");
