@@ -8,10 +8,14 @@ const ServicesSection = () => {
   return (
     <Section>
       <div className="flex flex-col gap-28 pt-24">
-        <Title size="medium" className="self-center">Our Services</Title>
+        <Title size="medium" className="self-center">
+          Our Services
+        </Title>
         <div className="flex justify-between">
           {servicesData.map((item) => {
-            return <ServicesCard Data={item} key={item.id} />;
+            return (
+              <ServicesCard Data={item} key={item.id} height={item.height} />
+            );
           })}
         </div>
       </div>

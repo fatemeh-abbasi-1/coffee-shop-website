@@ -5,6 +5,7 @@ export const servicesData = [
     title: "the best cakes",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dicta, quam incidunt.",
+    height: 500,
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ export const servicesData = [
     title: "the best cakes",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dicta, quam incidunt.",
+    height: 500,
   },
   {
     id: 3,
@@ -19,5 +21,6 @@ export const servicesData = [
     title: "the best cakes",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dicta, quam incidunt.",
+    height: 490,
   },
 ];
