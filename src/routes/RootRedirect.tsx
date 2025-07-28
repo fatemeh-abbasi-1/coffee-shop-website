@@ -12,7 +12,7 @@ const RootRedirect = () => {
       if (user) {
         navigate("/home");
       } else {
-        navigate("/login");
+        navigate("/login")
       }
     });
 

@@ -1,7 +1,6 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../../firebase/firebase";
 import { useNavigate, Link } from "react-router-dom";
-import { updateProfile } from "firebase/auth";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -32,8 +31,6 @@ const Register = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
 
-  const [fullName, setFullName] = useState("");
-
   useEffect(() => {
     setValidEmail(emailRegex.test(email));
   }, [email]);
@@ -53,9 +50,7 @@ const Register = () => {
         email,
         password
       );
-        await updateProfile(userCredential.user, {
-        displayName: fullName,
-      });
+
       setSuccess(true);
       navigate("/home");
       setError("");
@@ -78,19 +73,7 @@ const Register = () => {
       <div className="flex justify-center pt-32">
         <div className="flex flex-col gap-6 w-1/3 bg-dark_brown2 py-10 px-10 items-center border border-mocha">
           <Title size="medium">REGISTER</Title>
-
           <div className="flex flex-col gap-3">
-            <InputWithLable
-              variant="primary"
-              type="text"
-              id="full name"
-              labelText="Full Name"
-              value={fullName}
-              ref={inputRef}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                setFullName(e.target.value)
-              }
-            />
             <InputWithLable
               variant="primary"
               className={
@@ -108,6 +91,7 @@ const Register = () => {
               }
               onBlur={() => setEmailFocus(false)}
               onFocus={() => setEmailFocus(true)}
+              ref={inputRef}
             />
             {!validEmail && emailFocus && email && (
               <Text variant="smaller">Enter your email address.</Text>

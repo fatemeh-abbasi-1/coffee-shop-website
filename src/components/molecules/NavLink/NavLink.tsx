@@ -4,11 +4,9 @@ import Text from "../../atoms/Text/Text";
 import { NavLinkProps } from "./types";
 
 const NavLink: React.FC<NavLinkProps> = ({ variant }) => {
-  const sizeStyle = variant === "header" ? "pt-4 " : " ";
-
   return (
     <nav>
-      <ul className={`flex flex-row gap-14 font-bold ${sizeStyle}`}>
+      <ul className={`flex flex-row gap-14 font-bold`}>
         <Text>
           <li>
             <Link to={"/about-us"}>ABOUT US</Link>

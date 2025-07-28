@@ -69,10 +69,10 @@ const Header: React.FC = () => {
 
   // Listen for auth changes
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+    const exisistUser = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
     });
-    return () => unsubscribe();
+    return () => exisistUser();
   }, []);
 
   const handleLogout = async () => {
@@ -90,10 +90,10 @@ const Header: React.FC = () => {
       <Section height="h-fit" backgroundColor={"bg-main-background-secondary"}>
         <header className="flex justify-between">
           <Logo />
-          <div className="flex flex-row gap-20 pt-8 relative items-center">
+          <div className="flex flex-row gap-20 relative items-center">
             <NavLink variant="header" />
 
-            <p className="bg-green-500 rounded-full w-7 h-5 font-bold text-center absolute top-6 left-[417px]">
+            <p className="bg-green-500 rounded-full w-7 h-5 font-bold text-center absolute top-7 left-[417px]">
               {selectedProducts.length}
             </p>
 
@@ -104,8 +104,8 @@ const Header: React.FC = () => {
             </span>
 
             {user ? (
-              <div className="flex items-center gap-4">
-                <Text>{user.email}</Text>
+              <div className="flex items-center gap-9">
+                <Text variant="medium">{user.email?.slice(0, 6)}</Text>
                 <Button variant="large-secondary" onClick={handleLogout}>
                   Logout
                 </Button>

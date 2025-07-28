@@ -4,13 +4,14 @@ import Hr from "../../atoms/Hr/Hr";
 import Title from "../../atoms/Title/Title";
 import Text from "../../atoms/Text/Text";
 import SocialLinks from "../../molecules/SocialLinks/SocialLinks";
+import Logo from "../../atoms/Logo/Logo";
 // import Logo from "../../atoms/Logo/Logo";
 
 const Footer = () => {
   return (
     <Section
       backgroundColor={"bg-main-background-secondary"}
-      height="h-[560px]"
+      height="h-[630px]"
     >
       <Hr />
       <InfoItems />
@@ -27,10 +28,9 @@ const Footer = () => {
           <SocialLinks />
         </div>
       </div>
-      {/* <Hr /> */}
-      <div className="flex py-5 justify-between">
-        {/* <Logo /> */}
-        <Text>Logo</Text>
+
+      <div className="flex pt-2 justify-between items-center ">
+        <Logo />
         <Text>Copy Right 2025</Text>
       </div>
     </Section>
