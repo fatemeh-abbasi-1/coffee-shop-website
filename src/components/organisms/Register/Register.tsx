@@ -45,11 +45,7 @@ const Register = () => {
 
   const handleClick = async () => {
     try {
-      const sendInfo = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
+      await createUserWithEmailAndPassword(auth, email, password);
 
       setSuccess(true);
       navigate("/home");
@@ -76,12 +72,14 @@ const Register = () => {
           <div className="flex flex-col gap-3">
             <InputWithLable
               variant="primary"
-              className={
-                error &&
-                !emailFocus &&
-                !validEmail &&
-                "shadow-red-600 shadow-md border-2 border-red-600"
-              }
+              className={`
+                ${
+                  error &&
+                  !emailFocus &&
+                  !validEmail &&
+                  "shadow-red-600 shadow-md border-2 border-red-600"
+                }
+                `}
               type="text"
               id="register email"
               labelText="Email Address"
@@ -101,12 +99,13 @@ const Register = () => {
           <div className="flex flex-col gap-3">
             <InputWithLable
               variant="primary"
-              className={
+              className={`${
                 error &&
                 !passwordFocus &&
                 !validPassword &&
                 "shadow-red-600 shadow-md border-2 border-red-600"
               }
+                `}
               type="password"
               id="password"
               labelText="Password"

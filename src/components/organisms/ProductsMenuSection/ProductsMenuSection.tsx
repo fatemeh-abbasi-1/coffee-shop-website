@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Title from "../../atoms/Title/Title";
-import ProductCard from "../../molecules/ProductCard/ProductCard";
+import { Link } from "react-router-dom";
+
 import {
   fetchProducts,
   Product,
@@ -9,10 +9,14 @@ import {
   decrementPage,
 } from "../../../features/products/productSlice";
 import { RootState, AppDispatch } from "../../../app/store";
-import LeftArrowSvg from "../../../assets/icons/LeftArrowSvg";
-import RightArrowSvg from "../../../assets/icons/RightArrowSvg";
+
+import Title from "../../atoms/Title/Title";
+import ProductCard from "../../molecules/ProductCard/ProductCard";
 import Section from "../../atoms/Section/Section";
 import Button from "../../atoms/Button/Button";
+
+import LeftArrowSvg from "../../../assets/icons/LeftArrowSvg";
+import RightArrowSvg from "../../../assets/icons/RightArrowSvg";
 
 const ProductsMenuSection: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -21,7 +25,10 @@ const ProductsMenuSection: React.FC = () => {
   const totalCount = useSelector(
     (state: RootState) => state.products.totalCount
   );
-  console.log(totalCount);
+
+  const selectedProducts = useSelector(
+    (state: RootState) => state.products.selectedProducts
+  );
 
   useEffect(() => {
     dispatch(fetchProducts(page));
@@ -57,6 +64,19 @@ const ProductsMenuSection: React.FC = () => {
           >
             <RightArrowSvg />
           </Button>
+
+          <div>
+            <Link to={"/card"}>
+              <Button
+                variant="large-secondary"
+                className={`${
+                  selectedProducts.length < 1 ? "hidden" : ""
+                } ml-14 `}
+              >
+                Go To Card
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </Section>

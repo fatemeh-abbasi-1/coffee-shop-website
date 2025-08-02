@@ -13,7 +13,7 @@
       "name": "Lazi",
       "price": "150000",
       "image": "src/assets/images/Lazi.png",
-      "inventory": 18,
+      "inventory": 17,
       "discount": ""
     },
     {
@@ -21,7 +21,7 @@
       "name": "Ice Cream",
       "price": "150000",
       "image": "src/assets/images/Ice_Cream.png",
-      "inventory": 83,
+      "inventory": 86,
       "discount": ""
     },
     {
@@ -109,7 +109,7 @@
       "name": "Americano",
       "price": "150000",
       "image": "src/assets/images/Americano.png",
-      "inventory": 22,
+      "inventory": 23,
       "discount": "10 %"
     },
     {
@@ -133,7 +133,7 @@
       "name": "Hot chocolate",
       "price": "150000",
       "image": "src/assets/images/Hot-Chocolate.png",
-      "inventory": 21,
+      "inventory": 22,
       "discount": "10 %"
     },
     {
@@ -179,14 +179,6 @@
   ],
   "selectedProducts": [
     {
-      "id": "5",
-      "name": "Affogato",
-      "price": "150000",
-      "image": "src/assets/images/Affogato.png",
-      "inventory": 50,
-      "discount": "10 %"
-    },
-    {
       "id": "8",
       "name": "Turkish Coffee",
       "price": "150000",
@@ -195,43 +187,19 @@
       "discount": "10 %"
     },
     {
-      "id": "17",
-      "name": "Hot chocolate",
+      "id": "5",
+      "name": "Affogato",
       "price": "150000",
-      "image": "src/assets/images/Hot-Chocolate.png",
-      "inventory": 22,
+      "image": "src/assets/images/Affogato.png",
+      "inventory": 50,
       "discount": "10 %"
     },
     {
-      "id": "14",
-      "name": "Americano",
+      "id": "2",
+      "name": "Lazi",
       "price": "150000",
-      "image": "src/assets/images/Americano.png",
-      "inventory": 23,
-      "discount": "10 %"
-    },
-    {
-      "id": "3",
-      "name": "Ice Cream",
-      "price": "150000",
-      "image": "src/assets/images/Ice_Cream.png",
-      "inventory": 86,
-      "discount": ""
-    },
-    {
-      "id": "3",
-      "name": "Ice Cream",
-      "price": "150000",
-      "image": "src/assets/images/Ice_Cream.png",
-      "inventory": 85,
-      "discount": ""
-    },
-    {
-      "id": "3",
-      "name": "Ice Cream",
-      "price": "150000",
-      "image": "src/assets/images/Ice_Cream.png",
-      "inventory": 84,
+      "image": "src/assets/images/Lazi.png",
+      "inventory": 18,
       "discount": ""
     }
   ]

@@ -67,7 +67,6 @@ const Header: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
   const navigate = useNavigate();
 
-  // Listen for auth changes
   useEffect(() => {
     const exisistUser = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
@@ -93,7 +92,7 @@ const Header: React.FC = () => {
           <div className="flex flex-row gap-20 relative items-center">
             <NavLink variant="header" />
 
-            <p className="bg-green-500 rounded-full w-7 h-5 font-bold text-center absolute top-7 left-[417px]">
+            <p className="bg-green-500 rounded-full w-7 h-5 font-bold text-center absolute top-9 left-[417px]">
               {selectedProducts.length}
             </p>
 

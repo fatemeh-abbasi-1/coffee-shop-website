@@ -8,16 +8,15 @@ const Hero = () => {
   return (
     <Section>
       <div className="pt-28 flex flex-col md:flex-row gap-48">
-        <div className="w-1/2 flex flex-col gap-16 pt-6">
-          <Text> BIcic Coffee is Awesome</Text>
-          <Title>TIME DISCOVER COFFEE HOUSE</Title>
+        <div className="w-1/2 flex flex-col gap-20 pt-6">
+          <Text>Cofe Coffira</Text>
+          <Title size="medium">Welcome to Cofe Coffira – Where Every Sip Tells a Story</Title>
           <Text variant="small">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique
-            mollitia maxime quasi totam cupiditate laudantium maiores sunt
-            adipisci facere. Quidem, voluptate fugit! Animi sint aperiam,
-            voluptatem delectus libero sit facere!
+            At Cofe Coffira, your favorite coffee or cool drink is just a click
+            away. Order online and get it delivered to your door – fresh, fast,
+            and full of flavor.
           </Text>
-          <Button variant="large-primary">SHOP NOW</Button>
+          <Button variant="large-primary">Order Now</Button>
         </div>
         <img src={img} alt="" className="bg-transparent w-[500px]" />
       </div>

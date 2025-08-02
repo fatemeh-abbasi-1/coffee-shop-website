@@ -1,6 +1,8 @@
-const Logo = () => {
+import { LogoType } from "./type";
+
+const Logo: React.FC<LogoType> = ({ className }) => {
   return (
-    <span className="w-40 h-32">
+    <span className={`w-40 h-32 ${className}`}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
         <path
           fill="#F5CA97"

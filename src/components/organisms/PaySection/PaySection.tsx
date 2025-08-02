@@ -7,8 +7,8 @@ const PaySection = () => {
   return (
     <Section backgroundColor={"bg-main-background-secondary"}>
       <MiniHeader />
-      <div className="flex justify-center ">
-        <div className="flex justify-center p-10 gap-8 bg-dark_brown2 w-[800px] border border-mocha">
+      <div className="flex justify-center">
+        <div className="flex justify-center flex-col-reverse p-10 gap-8 bg-dark_brown2 w-[900px] border border-mocha">
           <CardPaymentForm />
           <PayDetails />
         </div>

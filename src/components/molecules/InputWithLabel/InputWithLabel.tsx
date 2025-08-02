@@ -17,7 +17,7 @@ const InputWithLable = React.forwardRef<HTMLInputElement, InputWithLableProps>(
       value,
       onBlur,
       onFocus,
-      className,
+      className = "",
       variant,
       error = false,
       errorText,

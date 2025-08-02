@@ -27,7 +27,7 @@ const ShoppingCardSection = () => {
 
   return (
     <Section>
-      <div className="flex flex-col items-center pt-10 pb-24 gap-16">
+      <div className="flex flex-col items-center pt-24 pb-24 gap-16">
         <Title>SOPPING CARD</Title>
         {uniqueProducts.length === 0 && (
           <Text>The shopping cart is empty.</Text>
@@ -59,7 +59,3 @@ const ShoppingCardSection = () => {
 };
 
 export default ShoppingCardSection;
-
-
-
-

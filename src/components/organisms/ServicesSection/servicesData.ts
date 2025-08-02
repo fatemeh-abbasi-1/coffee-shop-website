@@ -2,25 +2,25 @@ export const servicesData = [
   {
     id: 1,
     imgSrc: "src/assets/images/types-of-cakes.jpg",
-    title: "the best cakes",
+    title: "Fresh Cakes",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dicta, quam incidunt.",
+      "Soft and rich cakes baked fresh every day, perfect for sweet cravings at any time.",
     height: 500,
   },
   {
     id: 2,
     imgSrc: "src/assets/images/Cold-drinks.webp",
-    title: "the best cakes",
+    title: "Iced Drinks",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dicta, quam incidunt.",
+      "Chill out with our refreshing iced coffees and fruity drinks, served cold and full of flavor.",
     height: 500,
   },
   {
     id: 3,
     imgSrc: "src/assets/images/Hot-drinks.jpg",
-    title: "the best cakes",
+    title: "Hot Brews",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dicta, quam incidunt.",
+      "Warm up with bold espresso-based drinks, carefully brewed for deep flavor and cozy moments.",
     height: 490,
   },
 ];

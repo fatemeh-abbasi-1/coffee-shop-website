@@ -8,7 +8,7 @@ export interface InputWithLableProps {
   value?: string | number;
   onBlur?: () => void;
   onFocus?: () => void;
-  className?: React.ReactNode;
+  className?: string ;
   error?: boolean;
   errorText?: string;
 }

@@ -4,16 +4,14 @@ import Button from "../../atoms/Button/Button";
 
 const AboutUsContent = () => {
   return (
-    <div className="flex flex-col w-[800px] gap-16 p-12">
+    <div className="flex flex-col w-[800px] gap-20 p-12">
       <Title>About Us</Title>
       <Text>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nihil
-        est! Dignissimos fuga excepturi voluptates eos laudantium repellat sequi
-        laboriosam inventore est sit neque, in, repudiandae voluptate, rerum
-        officia vitae. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-        Iusto, temporibus neque officia ipsa minima labore odio modi! Quo,
-        quaerat mollitia alias nihil fugiat cupiditate ad quae debitis
-        distinctio, dignissimos soluta!
+        Cofe Coffira is more than just a coffee shop — it's where taste meets
+        comfort. We’re passionate about quality and detail, using only the
+        finest beans and ingredients to craft drinks and desserts that you’ll
+        remember. Whether you're starting your morning or taking a break, we're
+        here to deliver café-quality experiences right to you.
       </Text>
       <Button>Shop Now</Button>
     </div>
@@ -21,4 +19,3 @@ const AboutUsContent = () => {
 };
 
 export default AboutUsContent;
-
