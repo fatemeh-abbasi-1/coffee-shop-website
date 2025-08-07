@@ -11,13 +11,11 @@ const Title: React.FC<TitleProps> = ({
   const sizeStyles = (() => {
     switch (size) {
       case "large":
-        return "text-5xl md:text-6xl";
+        return "text-5xl";
       case "medium":
-        return "text-4xl md:text-5xl";
+        return "text-4xl";
       case "small":
-        return "text-2xl md:text-3xl";
-      default:
-        return "";
+        return "text-3xl";
     }
   })();
 

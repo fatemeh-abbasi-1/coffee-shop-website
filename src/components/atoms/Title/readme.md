@@ -4,9 +4,9 @@ this is a Title component.
 
 ## Accepts
 
-size,
-className,
-children
+- size => `large` , `small` , `medium`,
+- className,
+- children
 
 ## Usage
 

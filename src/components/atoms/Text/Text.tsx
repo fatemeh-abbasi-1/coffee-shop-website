@@ -9,12 +9,12 @@ const Text: React.FC<TextProps> = ({
 
   const sizeStyles =
     variant === "large"
-      ? "text-lg md:text-3xl"
+      ? "text-3xl"
       : variant === "medium"
-      ? "text-base md:text-2xl"
+      ? "text-2xl"
       : variant === "small"
-      ? "text-sm md:text-xl"
-      : "text-sm bg-transparent rounded-full px-2 text-white";
+      ? "text-xl"
+      : "text-xl bg-transparent rounded-full px-2 text-white";
 
   const combinedClass = `${baseStyles} ${sizeStyles} ${className}`;
 

@@ -9,7 +9,7 @@ import Register from "../components/organisms/Register/Register";
 import Login from "../components/organisms/Login/Login";
 import ShoppingCardPage from "../components/pages/ShoppingCardPage";
 import AboutUsPage from "../components/pages/AboutUsPage";
-import ContactUsPage from "../components/pages/ContactUsPage";
+//import ContactUsPage from "../components/pages/ContactUsPage";
 import PayPage from "../components/pages/PayPage";
 
 import RootRedirect from "./RootRedirect";
@@ -28,7 +28,7 @@ const AppRoutes = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/card" element={<ShoppingCardPage />} />
       <Route path="/about-us" element={<AboutUsPage />} />
-      <Route path="/contact-us" element={<ContactUsPage />} />
+      {/* <Route path="/contact-us" element={<ContactUsPage />} /> */}
       <Route path="/pay" element={<PayPage />} />
 
       <Route path="/" element={<RootRedirect />} />

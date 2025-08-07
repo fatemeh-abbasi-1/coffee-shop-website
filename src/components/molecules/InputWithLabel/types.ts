@@ -9,6 +9,6 @@ export interface InputWithLableProps {
   onBlur?: () => void;
   onFocus?: () => void;
   className?: string ;
-  error?: boolean;
+  error?: boolean | string;
   errorText?: string;
 }

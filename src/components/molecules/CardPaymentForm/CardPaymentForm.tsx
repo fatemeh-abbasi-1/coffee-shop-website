@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../../app/store";
-import { changeModalState } from "../../../features/products/productSlice";
+//import { changeModalState } from "../../../features/products/productSlice";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -26,7 +26,6 @@ const CardPaymentForm = () => {
   const [cvvFocus, setCvvFocus] = useState(false);
 
   const [error, setError] = useState("");
-  
 
   useEffect(() => {
     inputRef.current?.focus();
@@ -75,11 +74,9 @@ const CardPaymentForm = () => {
             onChange={(e) => setCardNumber(e.target.value)}
             onFocus={() => setCardFocus(true)}
             onBlur={() => setCardFocus(false)}
+            error={!validCard && cardFocus && cardNumber}
+            errorText="Card number must be 16 to 19 digits."
           />
-          {!validCard && cardFocus && cardNumber && (
-            <Text variant="smaller">Card number must be 16 to 19 digits.</Text>
-          )}
-
           <InputWithLable
             variant="secondary"
             id="second-password"
@@ -95,10 +92,9 @@ const CardPaymentForm = () => {
             onChange={(e) => setSecondPassword(e.target.value)}
             onFocus={() => setPasswordFocus(true)}
             onBlur={() => setPasswordFocus(false)}
+            error={!validSecondPassword && passwordFocus && secondPassword}
+            errorText="Password must contain only digits."
           />
-          {!validSecondPassword && passwordFocus && secondPassword && (
-            <Text variant="smaller">Password must contain only digits.</Text>
-          )}
 
           <InputWithLable
             variant="secondary"
@@ -112,13 +108,11 @@ const CardPaymentForm = () => {
             onChange={(e) => setCvv(e.target.value)}
             onFocus={() => setCvvFocus(true)}
             onBlur={() => setCvvFocus(false)}
+            error={!validCvv && cvvFocus && cvv}
+            errorText="CVV must be 3 or 4 digits."
           />
-          {!validCvv && cvvFocus && cvv && (
-            <Text variant="smaller">CVV must be 3 or 4 digits.</Text>
-          )}
         </form>
       </div>
-
       <Button
         variant="large-secondary"
         className="mt-8 text-mocha"
