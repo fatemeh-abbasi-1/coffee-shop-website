@@ -8,7 +8,7 @@ const baseStyle = `w-12 text-creamy_white`;
 
 const SocialLinks: React.FC<SocialLinksProps> = ({ className }) => {
   return (
-    <div className={`flex gap-6 ${className}`}>
+    <div className={`flex gap-8 md:gap-10 ${className}`}>
       <a href="#" className={baseStyle}>
         <Instagram />
       </a>

@@ -27,7 +27,7 @@ const NumberProductSelected: React.FC<NumberProductSelectedProps> = ({
   };
 
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-6">
       <span
         className="text-white mt-1 text-2xl cursor-pointer"
         onClick={removeFromCard}

@@ -13,7 +13,7 @@ export const servicesData = [
     title: "Iced Drinks",
     description:
       "Chill out with our refreshing iced coffees and fruity drinks, served cold and full of flavor.",
-    height: 500,
+    height: 300,
   },
   {
     id: 3,

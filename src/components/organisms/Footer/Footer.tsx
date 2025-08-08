@@ -11,12 +11,15 @@ const Footer = () => {
   return (
     <Section
       backgroundColor={"bg-main-background-secondary"}
-      height="h-[630px]"
+      height="h-full md:h-[750px] xl:h-[670px]"
     >
       <Hr />
-      <InfoItems />
-      <div className="flex pb-32 pt-10">
-        <div className="flex flex-col justify-between w-1/2 gap-8 pt-10">
+      <div className="flex flex-col md:flex-row justify-center">
+        <InfoItems />
+      </div>
+
+      <div className="flex flex-col-reverse md:flex-row pb-32 pt-24 md:pt-10 items-center gap-16 md:gap-10">
+        <div className="flex flex-col justify-between w-10/12 md:w-1/2 gap-8 pt-10">
           <Title size="small">About Us</Title>
           <Text>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam
@@ -24,12 +27,12 @@ const Footer = () => {
             aspernatur.
           </Text>
         </div>
-        <div className="flex justify-end w-1/2 items-end ">
+        <div className="flex justify-end w-1/2 md:items-end ">
           <SocialLinks />
         </div>
       </div>
 
-      <div className="flex pt-2 justify-between items-center ">
+      <div className="flex pt-2 justify-between items-center gap-3 ">
         <Logo />
         <Text>Copy Right 2025</Text>
       </div>

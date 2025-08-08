@@ -8,6 +8,7 @@ import { ProductsCardProps } from "./type";
 import Button from "../../atoms/Button/Button";
 import Text from "../../atoms/Text/Text";
 import NumberProductSelected from "../NumberProductSelected/NumberProductSelected";
+import Image from "../../atoms/Image/Image";
 
 const ProductCard: React.FC<ProductsCardProps> = ({ product }) => {
   const selectedProducts = useSelector(
@@ -34,28 +35,24 @@ const ProductCard: React.FC<ProductsCardProps> = ({ product }) => {
   }, [count]);
 
   return (
-    <div className="md:w-[400px] h-36 bg-transparent border-4 border-mocha pl-20 relative pt-3">
+    <div className="w-[300px] md:w-[400px] h-36 bg-transparent border-4 border-mocha pl-10 md:pl-20 relative pt-3">
       <span ref={idRef} className="hidden">
         {product.id}
       </span>
-      <img
+      <Image
         src={product.image}
+        className="w-20 md:w-[90px] h-[85px] absolute -left-12 top-5"
         alt="Product-Image"
-        className="w-[90px] h-[85px] absolute -left-12"
       />
       <div className="flex flex-row justify-between">
-        <div className="flex flex-col pt-3 gap-2">
+        <div className="gap-1 flex flex-col pt-3 md:gap-2">
           <Text variant="small">{product.name}</Text>
           <div className="flex gap-3">
-            <Text variant="small">
-              {product.price}
-              <span className="text-white ml-2 text-sm">Toman</span>
-            </Text>
-            {/* <Text variant="small">{Number(product.price) * count} Tom</Text> */}
+            <Text variant="small">{`${product.price} $`}</Text>
           </div>
         </div>
 
-        <span className="p-4 border-l-2 mt-3 border-mocha h-20">
+        <span className="p-1 md:p-4 border-l-2 mt-3 border-mocha h-20 flex items-center">
           <Button
             variant="small"
             onClick={addToCard}

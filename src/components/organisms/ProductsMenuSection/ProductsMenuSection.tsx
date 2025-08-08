@@ -44,16 +44,16 @@ const ProductsMenuSection: React.FC = () => {
 
   return (
     <Section backgroundColor={"bg-main-background-secondary"}>
-      <div className="flex flex-col gap-16 pt-20 pl-10">
-        <div className="flex justify-center">
-          <Title size="medium">Our Products Menu</Title>
+      <div className="flex flex-col gap-16 pt-12 pl-7 md:pl-10 ">
+        <div className="flex justify-center mb-10">
+          <Title size="large">Our Products Menu</Title>
         </div>
-        <div className="flex flex-wrap gap-16 justify-between">
+        <div className="flex flex-wrap justify-around gap-16">
           {products.map((product: Product) => (
             <ProductCard product={product} key={product.id} />
           ))}
         </div>
-        <div className="flex flex-row gap-4 self-center">
+        <div className="flex flex-row gap-1 md:gap-4 self-center">
           <Button variant="icon" onClick={goToPrew} disabled={page === 1}>
             <LeftArrowSvg />
           </Button>
@@ -71,7 +71,7 @@ const ProductsMenuSection: React.FC = () => {
                 variant="large-secondary"
                 className={`${
                   selectedProducts.length < 1 ? "hidden" : ""
-                } ml-14 `}
+                } ml-5 md:ml-14`}
               >
                 Go To Card
               </Button>

@@ -20,7 +20,6 @@ const Hero = () => {
           </Text>
           <Button variant="large-primary">Order Now</Button>
         </div>
-        {/* <img src={img} alt="" className="bg-transparent w-full max-w-[500px]" /> */}
         <Image
           src={img}
           className="w-full md:w-[400px] lg:w-[500px] max-w-[490px] px-3 lg:pr-2"
@@ -31,4 +30,4 @@ const Hero = () => {
 };
 
 export default Hero;
-//  flex flex-col md:flex-row items-center md:items-start gap-16 md:gap-48
+

@@ -7,11 +7,11 @@ import ServicesCard from "../../molecules/ServicesCard/ServicesCard";
 const ServicesSection = () => {
   return (
     <Section>
-      <div className="flex flex-col gap-28 pt-24">
-        <Title size="medium" className="self-center">
+      <div className="flex flex-col gap-28 pt-24 pb-40">
+        <Title size="large" className="self-center">
           Our Services
         </Title>
-        <div className="flex justify-between">
+        <div className="flex justify-around flex-wrap gap-16">
           {servicesData.map((item) => {
             return (
               <ServicesCard Data={item} key={item.id} height={item.height} />
