@@ -31,48 +31,38 @@ const ContactUsSection = () => {
 
   return (
     <Section>
-      <div className="flex gap-96 justify-center pt-52">
-        <div className="flex flex-col gap-20 w-[1000px] ">
-          <div className="flex flex-col gap-12">
+      <div className="flex justify-center pt-32">
+        <div className="flex flex-col gap-10 w-full max-w-2xl">
+          <div className="flex flex-col gap-6">
             <InputWithLable
-              type={"text"}
-              labelText={"Name"}
+              type="text"
+              labelText="Name"
               id="Contact-Name"
-              variant="secondary"
-              onChange={(e) => {
-                setName(e.target.value);
-              }}
+              variant="primary"
+              onChange={(e) => setName(e.target.value)}
               value={name}
             />
             <InputWithLable
-              variant="secondary"
-              type={"text"}
-              labelText={"Email"}
+              type="email"
+              labelText="Email"
               id="Contact-Email"
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
+              variant="primary"
+              onChange={(e) => setEmail(e.target.value)}
               value={email}
             />
-
             <InputWithLable
-              variant="secondary"
-              type={"text"}
-              labelText={"Message"}
+              type="text"
+              labelText="Message"
               id="Contact-Message"
-              onChange={(e) => {
-                setMessage(e.target.value);
-              }}
+              variant="primary"
+              onChange={(e) => setMessage(e.target.value)}
               value={message}
             />
           </div>
-          <div className="flex gap-20">
+          <div className="flex gap-5 items-center">
             <Button onClick={sendMessage}>Send</Button>
             {error && (
-              <Text
-                variant="small"
-                className="text-red-600 mt-2 bg-creamy_white p-2 important"
-              >
+              <Text variant="small" className="text-red-600">
                 Please Write the information.
               </Text>
             )}

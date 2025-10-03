@@ -1,12 +1,12 @@
+import { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../../app/store";
-//import { changeModalState } from "../../../features/products/productSlice";
-
-import { useEffect, useRef, useState } from "react";
+import { changeModalState } from "../../../features/products/productSlice";
 
 import InputWithLable from "../InputWithLabel/InputWithLabel";
 import Button from "../../atoms/Button/Button";
 import Text from "../../atoms/Text/Text";
+import Modal from "../Modal/Modal";
 
 const CardPaymentForm = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -53,7 +53,7 @@ const CardPaymentForm = () => {
     setCardNumber("");
     setSecondPassword("");
     setCvv("");
-    dispatch(changeModalState());
+    dispatch(changeModalState()); // ✅ نمایش Modal
   };
 
   return (
@@ -66,11 +66,9 @@ const CardPaymentForm = () => {
             type="text"
             labelText="Card Number"
             value={cardNumber}
-            className={`
-          w-[500px] ${
-            error && !cardFocus && !validCard && "border-b-4 border-b-red-600"
-          }
-            `}
+            className={`w-[500px] ${
+              error && !cardFocus && !validCard && "border-b-4 border-b-red-600"
+            }`}
             onChange={(e) => setCardNumber(e.target.value)}
             onFocus={() => setCardFocus(true)}
             onBlur={() => setCardFocus(false)}
@@ -95,7 +93,6 @@ const CardPaymentForm = () => {
             error={!validSecondPassword && passwordFocus && secondPassword}
             errorText="Password must contain only digits."
           />
-
           <InputWithLable
             variant="secondary"
             id="cvv"
@@ -120,6 +117,7 @@ const CardPaymentForm = () => {
       >
         Pay
       </Button>
+      <Modal message="Pay Successfull." showOkButton={false} />
       {error && (
         <Text variant="small" className="text-red-500">
           {error}

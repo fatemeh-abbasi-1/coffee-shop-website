@@ -35,7 +35,7 @@ const PayDetails = () => {
         </div>
         <div className="flex justify-between">
           <Text>Discount</Text>
-          <Text>{discount}</Text>
+          <Text>{discount.toFixed(2)}</Text>
         </div>
         <Hr />
         <div className="flex justify-between">

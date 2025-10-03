@@ -18,34 +18,33 @@ const InputWithLable = React.forwardRef<HTMLInputElement, InputWithLableProps>(
       onBlur,
       onFocus,
       className = "",
-      variant,
+      variant = "primary",
       error = false,
       errorText,
     },
     ref
   ) => {
-    const style =
-      variant === "primary" ? "flex-col gap-1" : "flex justify-between";
-
     return (
-      <div className={`flex ${style}`}>
-        <Label htmlFor={id} className={variant !== "primary" ? "mt-4" : ""}>
+      <div className="flex flex-col gap-2 w-full">
+        <Label htmlFor={id}>
           <Text variant="medium">{labelText}</Text>
         </Label>
-        <div className="flex flex-col">
-          <Input
-            variant={variant}
-            className={className}
-            type={type}
-            ref={ref}
-            onChange={onChange}
-            value={value}
-            onBlur={onBlur}
-            onFocus={onFocus}
-            placeholder={placeholder}
-          />
-          {error && <Text variant="smaller" className="mt-1">{errorText}</Text>}
-        </div>
+        <Input
+          variant={variant}
+          className={className}
+          type={type}
+          ref={ref}
+          onChange={onChange}
+          value={value}
+          onBlur={onBlur}
+          onFocus={onFocus}
+          placeholder={placeholder}
+        />
+        {error && (
+          <Text variant="smaller" className="mt-1 text-red-600">
+            {errorText}
+          </Text>
+        )}
       </div>
     );
   }

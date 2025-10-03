@@ -1,6 +1,6 @@
 export interface InputWithLableProps {
   variant: "primary" | "secondary";
-  type: "text" | "password";
+  type: "text" | "password" | "email";
   labelText: string;
   id: string;
   placeholder?: string;
@@ -8,7 +8,7 @@ export interface InputWithLableProps {
   value?: string | number;
   onBlur?: () => void;
   onFocus?: () => void;
-  className?: string ;
+  className?: string;
   error?: boolean | string;
   errorText?: string;
 }

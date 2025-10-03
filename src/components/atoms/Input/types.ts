@@ -1,6 +1,6 @@
 export type InputProps = {
   variant: "primary" | "secondary";
-  type: "text" | "password";
+  type: "text" | "password" | "email";
   placeholder?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   value?: string | number;
