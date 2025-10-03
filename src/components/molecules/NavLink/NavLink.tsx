@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 
 import Text from "../../atoms/Text/Text";
-import { NavLinkProps } from "./types";
 
-const NavLink: React.FC<NavLinkProps> = ({ variant }) => {
+const NavLink = () => {
   return (
     <nav>
       <ul className={`flex flex-row gap-14 font-bold`}>

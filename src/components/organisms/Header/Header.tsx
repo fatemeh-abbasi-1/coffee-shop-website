@@ -1,48 +1,3 @@
-// import { useSelector } from "react-redux";
-
-// import { RootState } from "../../../app/store";
-
-// import Section from "../../atoms/Section/Section";
-// import NavLink from "../../molecules/NavLink/NavLink";
-// import Button from "../../atoms/Button/Button";
-// import Hr from "../../atoms/Hr/Hr";
-// import Logo from "../../atoms/Logo/Logo";
-
-// import ShoppingCard from "../../../assets/icons/ShoppingCardSvg";
-// import { Link } from "react-router-dom";
-
-// const Header: React.FC = () => {
-//   const selectedProducts = useSelector(
-//     (state: RootState) => state.products.selectedProducts
-//   );
-
-//   return (
-//     <>
-//       <Section height="h-fit" backgroundColor={"bg-main-background-secondary"}>
-//         <header className="flex justify-between">
-//           <Logo />
-//           <div className="flex flex-row gap-20 pt-8 relative">
-//             <NavLink variant="header" />
-//             <p className="bg-green-500 rounded-full w-7 h-5 font-bold text-center absolute top-6 left-[417px]">
-//               {selectedProducts.length}
-//             </p>
-//             <span className="w-11 h-8 text-white">
-//               <Link to={"/card"}>
-//                 <ShoppingCard />
-//               </Link>
-//             </span>
-//             <Button variant="large-secondary">
-//               <Link to={"/login"}>Login</Link>
-//             </Button>
-//           </div>
-//         </header>
-//         <Hr />
-//       </Section>
-//     </>
-//   );
-// };
-
-// export default Header;
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
@@ -87,23 +42,34 @@ const Header: React.FC = () => {
   return (
     <>
       <Section height="h-fit" backgroundColor={"bg-main-background-secondary"}>
-        <header className="flex justify-between">
-          <Logo />
-          <div className="flex flex-row gap-20 relative items-center">
-            <NavLink variant="header" />
+        <header className="flex flex-col items-center sm:flex-row sm:justify-between sm:items-center gap-4 sm:gap-6 md:gap-12 px-4 py-3">
+          {/* Logo */}
+          <div className="flex justify-center">
+            <Logo />
+          </div>
 
-            <p className="bg-green-500 rounded-full w-7 h-5 font-bold text-center absolute top-9 left-[417px]">
-              {selectedProducts.length}
-            </p>
+          {/* Nav + Shopping cart + Auth */}
+          <div className="flex flex-col items-center sm:flex-row sm:items-center gap-6 md:gap-12">
+            {/* Nav Links */}
+            <NavLink />
 
-            <span className="w-11 h-8 text-white">
-              <Link to={"/card"}>
+            {/* Cart */}
+            <div className="relative flex items-center justify-center">
+              <Link
+                to={"/card"}
+                className="relative w-10 h-10 flex items-center justify-center text-white"
+              >
                 <ShoppingCard />
+                {/* Badge inside the same container */}
+                <span className="absolute -top-2 -right-2 bg-green-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold">
+                  {selectedProducts.length}
+                </span>
               </Link>
-            </span>
+            </div>
 
+            {/* Auth Buttons */}
             {user ? (
-              <div className="flex items-center gap-9">
+              <div className="flex flex-col items-center sm:flex-row sm:items-center gap-2 sm:gap-6">
                 <Text variant="medium">{user.email?.slice(0, 6)}</Text>
                 <Button variant="large-secondary" onClick={handleLogout}>
                   Logout
@@ -116,6 +82,7 @@ const Header: React.FC = () => {
             )}
           </div>
         </header>
+
         <Hr />
       </Section>
     </>

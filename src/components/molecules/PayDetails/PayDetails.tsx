@@ -19,28 +19,35 @@ const PayDetails = () => {
   const discount = (total * 2) / 1000;
 
   return (
-    <div className="flex gap-16 justify-center  p-4">
-      <div>
+    <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 justify-center p-6">
+      {/* Image */}
+      <div className="flex justify-center">
         <Image
           src="src/assets/images/BankCard.png"
           alt="Bank Card"
-          className="mb-5 w-[330px]"
+          className="w-full max-w-[330px] mb-5"
         />
       </div>
-      <div className=" flex flex-col gap-2 p-2  ">
+
+      {/* Details */}
+      <div className="flex flex-col gap-4 p-2 w-full max-w-sm">
         <Title size="small">Order Summary</Title>
+
         <div className="flex justify-between">
           <Text>Total</Text>
           <Text>{total}</Text>
         </div>
+
         <div className="flex justify-between">
           <Text>Discount</Text>
           <Text>{discount.toFixed(2)}</Text>
         </div>
+
         <Hr />
+
         <div className="flex justify-between">
           <Title size="small">Total</Title>
-          <Text>{total - discount}</Text>
+          <Text>{(total - discount).toFixed(2)}</Text>
         </div>
       </div>
     </div>

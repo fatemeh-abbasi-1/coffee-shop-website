@@ -6,13 +6,16 @@ import PayDetails from "../../molecules/PayDetails/PayDetails";
 const PaySection = () => {
   return (
     <Section backgroundColor={"bg-main-background-secondary"}>
-      <MiniHeader />
+      <div className="pb-10">
+         <MiniHeader />
       <div className="flex justify-center">
         <div className="flex justify-center flex-col-reverse p-10 gap-8 bg-dark_brown2 w-[900px] border border-mocha h-fit">
           <CardPaymentForm />
           <PayDetails />
         </div>
       </div>
+      </div>
+     
     </Section>
   );
 };
