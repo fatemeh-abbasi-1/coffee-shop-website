@@ -1,12 +1,15 @@
 # Button
 
-This is a button component, with two variants, primary and secondary.
+This is a button component, with 5 props.
 
 ## Accepts
 
-primary,
-secondary
+- variant
+- children
+- class Name
+- o'clock
+- disabled
 
 ## Usage
 
-- Default: `<Button variant={primary}>{children}</Button>`
+- Default: `<Button variant={largr-primary}>{children}</Button>`
