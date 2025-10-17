@@ -6,10 +6,10 @@ This is a button component, with 5 props.
 
 - variant
 - children
-- class Name
-- o'clock
+- className
+- onclick
 - disabled
 
 ## Usage
 
-- Default: `<Button variant={largr-primary}>{children}</Button>`
+- Default: `<Button variant={large-primary}>{children}</Button>`
